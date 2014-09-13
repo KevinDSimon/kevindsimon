@@ -1,12 +1,106 @@
 // bower:scss
 // endbower
 
-body {
-  background: #fafafa;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #333;
+/* compass */
+@import "compass";
+
+/* Color Variables*/
+$brand: #27AE60;
+$base-font-color: #444;
+$base-font: 'Roboto', sans-serif; /*300, 500, 900*/
+
+/*Vertical Rhythm Typography*/
+$base-font-size: 16px;
+$base-line-height: 24px;
+@include establish-baseline;
+
+/*Styles*/
+
+/*Main*/
+body  {
+  color: $base-font-color;
+  font-family:  $base-font;
+  font-weight: 300;
+}
+.main-wrapper{
+  float: left;
+  position: relative;
+  width: 100%;
+  @include transition(all 0.3s ease-in-out);
+}
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 50px;
+}
+h1 {
+  @include adjust-leading-to(.8);
 }
 
+/*Navigation*/
+.lines {
+    position: absolute;
+    right: 85px;
+    top:  40px;
+}
+.lines span,
+.lines span:before,
+.lines span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 30px;
+  background: black;
+  position: absolute;
+  display: block;
+  content: '';
+}
+.lines span:before {
+  top: -10px; 
+}
+.lines span:after {
+  bottom: -10px;
+}
+.lines span,
+.lines span:before,
+.lines span:after {
+  @include transition(all 0.1s ease-in-out);
+}
+.lines.close span:before,
+.lines.close span:after {
+  top: 0;
+}
+.lines.close span {
+  background-color: transparent;
+   &:before {
+    @include rotate(45deg);
+   }
+   &:after {
+    @include rotate(-45deg);
+   }
+}
+#main-nav.nav-active {
+  width: 200px;
+  + .main-wrapper {
+    width: 100%;
+    @include transition(all 0.3s ease-in-out);
+    @include translateX(-200px)
+  }
+}
+nav  {
+  background: $brand;
+  right: -60px;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 0;
+  @include transition(all 0.3s ease-in-out);
+  padding: 30px;
+}
+
+/*Main*/
 .hero-unit {
   margin: 50px auto 0 auto;
   width: 300px;
@@ -16,13 +110,9 @@ body {
   background-color: #eee;
   border-radius: 6px;
   padding: 60px;
-  h1 {
-    font-size: 60px;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
 }
 
+/*Browse Happy*/
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
