@@ -18,7 +18,9 @@
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
-
+    <!-- build:js scripts/vendor/waypoints.min.js -->
+    <script src="bower_components/jquery-waypoints/waypoints.min.js"></script>
+    <!-- endbuild -->
   </head>
   <body>
     <!--[if lt IE 10]>
@@ -27,15 +29,20 @@
 
 
     <nav id="main-nav">
-        <a href="#">Nav Links</a>
-    </nav>
+        <ul>
+            <li>About</li>
+            <li>Resume</li>
+            <li>Portfolio</li>
+            <li>Contact</li>
+        </ul>
+     </nav>
+
+     <img src="images/floating-logo.png" class="logo">
 
     <div class="main-wrapper">
         <div class="container">
-            <header class="hero-unit">
-                <div class="lines"><span></span></div>
-                <h1>Hello world! This is HTML5 Boilerplate.</h1>
-            </header>
+            <div class="lines"><span></span></div>
+            <header id="hero" class="bg_parralax" data-type="background" data-speed="5"></header>
         <div>              
     </div>
 

@@ -3,6 +3,7 @@
 
 /* compass */
 @import "compass";
+@import "compass/reset";
 
 /* Color Variables*/
 $brand: #27AE60;
@@ -17,6 +18,9 @@ $base-line-height: 24px;
 /*Styles*/
 
 /*Main*/
+* {
+    box-sizing:  border-box;
+}
 body  {
   color: $base-font-color;
   font-family:  $base-font;
@@ -27,12 +31,6 @@ body  {
   position: relative;
   width: 100%;
   @include transition(all 0.3s ease-in-out);
-}
-.container {
-  max-width: 600px;
-  margin: 0 auto;
-  box-sizing: border-box;
-  padding: 50px;
 }
 h1 {
   @include adjust-leading-to(.8);
@@ -51,10 +49,11 @@ h1 {
   border-radius: 1px;
   height: 5px;
   width: 30px;
-  background: black;
+  background: white;
   position: absolute;
   display: block;
   content: '';
+  z-index:  10;
 }
 .lines span:before {
   top: -10px; 
@@ -81,7 +80,7 @@ h1 {
    }
 }
 #main-nav.nav-active {
-  width: 200px;
+  right: 0px;
   + .main-wrapper {
     width: 100%;
     @include transition(all 0.3s ease-in-out);
@@ -89,27 +88,55 @@ h1 {
   }
 }
 nav  {
-  background: $brand;
-  right: -60px;
+  background: #222;
+  right: -200px;
   height: 100%;
   overflow: hidden;
   position: fixed;
   top: 0;
-  width: 0;
+  width: 200px;
+  padding: 30px 0 0;
   @include transition(all 0.3s ease-in-out);
-  padding: 30px;
+    ul {
+        list-style-type:  none; 
+    }
+     li {
+        text-align:  center;
+        color:  white;
+        padding: 15px 0;
+        text-transform:  uppercase;
+        border-bottom:  1px solid #1B1B1B;
+        letter-spacing: .1em;
+        @include transition(all 0.3s ease-in-out);
+            &:first-child {
+                border-top:  1px solid #1B1B1B;
+            }
+            &:hover {
+                background-color:  $brand;
+            }
+     }
 }
 
 /*Main*/
-.hero-unit {
-  margin: 50px auto 0 auto;
-  width: 300px;
-  font-size: 18px;
-  font-weight: 200;
-  line-height: 30px;
-  background-color: #eee;
-  border-radius: 6px;
-  padding: 60px;
+#hero {
+    background: url('../images/me-bw.jpg');
+    background-attachment: fixed;
+    background-origin: initial;
+    background-clip: initial;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    position: relative;
+    text-align: center;
+}
+.logo {
+    position: fixed;
+    left: 35px;
+    top: 35px;
+    z-index: 50;
+    display: none;
+    width: 54px;
+    background-size: cover;
 }
 
 /*Browse Happy*/
