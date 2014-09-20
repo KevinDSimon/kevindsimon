@@ -17,6 +17,11 @@ $base-line-height: 24px;
 
 /*Styles*/
 
+/* Helpers */
+.center {
+    text-align:  center;
+}
+
 /*Main*/
 * {
     box-sizing:  border-box;
@@ -63,7 +68,7 @@ a:focus {
     font-size: .75em;
     border-radius: 4px;
     @include user-select(none);
-    margin: 10px 0;
+    margin: 35px 0 0;
     text-transform: uppercase;
     font-weight: 500;
     @include transition(all 0.3s ease-in-out);
@@ -94,7 +99,7 @@ h2:after {
     background: $brand;
 }
 
-/*Navigation*/
+/*Navigation */
 .lines {
     position: fixed;
     right: 85px;
@@ -137,47 +142,63 @@ h2:after {
     @include rotate(-45deg);
    }
 }
-#main-nav.nav-active {
-  right: 0px;
-  + .main-wrapper {
+
+.overlay {
+    background: rgba(0,0,0, .6);
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
     width: 100%;
-    @include transition(all 0.3s ease-in-out);
-    @include translateX(-200px)
-  }
+        nav {
+           @include adjust-font-size-to(48px);
+            height: 60%;
+            position: relative;
+            text-align: center;
+            top: 50%;
+            @include translateY(-50%)
+        }
+        ul {
+            display: inline-block;
+            height: 100%;
+            list-style: none;
+            margin: 0 auto;
+            padding: 0;
+            position: relative;
+                li {
+                    /*display: block;
+                    height: 20%;
+                    height: calc(100% / 5);
+                    min-height: 48px;*/
+                        a {
+                            color: #fff;
+                            display: inline-block;
+                            font-weight:  900;
+                            letter-spacing: .2em;
+                            padding:  5px 15px;
+                            text-transform: uppercase;
+                            /*@include transition (color 0.2s);*/
+                                &:hover, :focus {
+                                    background-color:  white;
+                                    color: $brand;
+                                }
+                        }
+                }
+        }
 }
-nav  {
-  background: #222;
-  right: -200px;
-  height: 100%;
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  width: 200px;
-  padding: 30px 0 0;
-  z-index:  5;
-  @include transition(all 0.3s ease-in-out);
-    ul {
-        list-style-type:  none; 
-    }
-     li {
-        text-align:  center;
-        color:  white;
-        padding: 15px 0;
-        text-transform:  uppercase;
-        border-bottom:  1px solid #1B1B1B;
-        letter-spacing: .1em;
-        @include transition(all 0.3s ease-in-out);
-            &:first-child {
-                border-top:  1px solid #1B1B1B;
-            }
-            &:hover {
-                background-color:  $brand;
-            }
-     }
+.overlay-hugeinc {
+    opacity: 0;
+    visibility: hidden;
+    @include transition(opacity 0.5s, visibility 0s 0.5s) ;
+        &.open {
+            opacity: 1;
+            visibility: visible;
+            @include transition(opacity 0.5s);
+        }
 }
 
 /*Main*/
-#hero {
+.hero {
     background: url('../images/me-bw.jpg');
     background-color:  #222;
     background-attachment: fixed;
@@ -185,8 +206,10 @@ nav  {
     background-clip: initial;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 100% 0;
+    background-position:  35% 0;
     position: relative;
+    height:  100vh;
+    width:  100vw;
     text-align: center;
 }
 .logo {
