@@ -30,10 +30,12 @@ $(document).ready(function() {
         // do this on the way down
         else if (direction === 'down') {
             $('.logo').fadeIn('slow');
+            $('.lines').addClass('black');
         }
         // do this on the way back up through the waypoint
         else {
             $('.logo').fadeOut('slow');
+            $('.lines').removeClass('black');
         }       
     });
 });
