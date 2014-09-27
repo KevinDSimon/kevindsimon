@@ -8,7 +8,7 @@
 /* Color Variables*/
 $brand: #27AE60;
 $base-font-color: #444;
-$base-font: 'Roboto', sans-serif; /*300, 500, 900*/
+$base-font: 'Lato', sans-serif; /*300, 400, 900*/
 
 /*Vertical Rhythm Typography*/
 $base-font-size: 16px;
@@ -44,6 +44,9 @@ a:hover {
 a:focus {
     outline: 0;
 }
+header {
+    text-align: center;
+}
 .main-wrapper{
   float: left;
   position: relative;
@@ -51,9 +54,10 @@ a:focus {
   @include transition(all 0.3s ease-in-out);
 }
 .container {
+    border-bottom:  2px dashed #E5E5E5;
     margin:  0 auto;
-    max-width:  600px;
     padding:  100px 30px;
+    max-width:  1140px;
 }
 .btn {
     display: inline-block;
@@ -70,7 +74,7 @@ a:focus {
     @include user-select(none);
     margin: 35px 0 0;
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 900;
     @include transition(all 0.3s ease-in-out);
 }
 .btn:hover {
@@ -98,6 +102,9 @@ h2:after {
     left: 50%;
     background: $brand;
 }
+h3 {
+    margin-bottom:  24px;
+}
 
 /*Navigation */
 .lines {
@@ -105,8 +112,15 @@ h2:after {
     right: 85px;
     top:  40px;
     z-index:  15;
-     &.black span,.black span:before,.black span:after {
+    @include transition(all 0.1s ease-in-out);
+     &.black span {
         background:  black;
+     }
+     &.black span:before {
+        background: black;
+     }
+     &.black span:after {
+        background: black;
      }
 }
 .lines span,
@@ -222,7 +236,41 @@ h2:after {
     background-size: cover;
 }
 
+/* Skills */
+#skills article {
+    display: flex;
+    margin-top:  24px;
+}
+.skill-wrapper {
+    flex: 1;
+    padding: 30px;
+    position: relative;
+    text-align: center;
+    vertical-align:  top;
+}
+[class*='icon'] {
+    height: 88px;
+    position: relative;
+}
+.icon-development {
+    top: 17px;
+}
+.icon-tools {
+    top: 14px;
+}
+
+
 /* About */
+#about  article {
+    display: flex;
+        div {
+            flex: 1;
+            padding: 0 15px 0 0;
+                + div {
+                    padding: 0 0 0 15px;
+                }
+        }
+}
 
 
 /*Browse Happy*/
