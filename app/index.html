@@ -26,8 +26,8 @@
     <![endif]-->
 
     <div class="main-wrapper">
-     
-        <header class="hero" ></header> 
+        
+        <header class="hero" class="bg_parralax" data-type="background" data-speed="5"></header> 
 
         <section id="about">
             <div class="container">
@@ -55,7 +55,7 @@
                 </header>
                 <article>
                     <div class="skill-wrapper">
-                        <div class="icon-design"><img src="images/design.svg"/></div>
+                        <div class="icon-design"><img data-src="images/design.svg"/></div>
                         <h3>Design</h3>
                         <ul>
                             <li>User Interface</li>
@@ -65,7 +65,7 @@
                         </ul>   
                     </div>
                     <div class="skill-wrapper">
-                        <div class="icon-development"><img src="images/development.svg"/></div>
+                        <div class="icon-development"><img  data-src="images/development.svg"/></div>
                         <h3>Development</h3>
                         <ul>
                             <li>HTML5</li>
@@ -75,7 +75,7 @@
                         </ul>  
                     </div>
                     <div class="skill-wrapper">
-                        <div class="icon-tools"><img src="images/tools.svg"/></div>
+                        <div class="icon-tools"><img  data-src="images/tools.svg"/></div>
                         <h3>Tools</h3>
                         <ul>
                             <li>Git / SVN</li>
@@ -86,10 +86,18 @@
                     </div>
                 </article>
             </div>
-        </section>            
+        </section> 
+
+        <section id="work">
+            <div class="container">
+                <header>
+                    <h2>Work</h2>
+                </header>
+        </section>           
 
     </div><!-- main wrapper -->
 
+    <img src="images/floating-logo.png" class="logo">
     <div class="lines"><span></span></div>
     <div class="overlay overlay-hugeinc">
         <nav>
@@ -107,6 +115,7 @@
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/jquery-unveil/jquery.unveil.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -120,6 +129,9 @@
       ga('create','UA-XXXXX-X');ga('send','pageview');
     </script>
 
+    <!-- build:js scripts/vendor/jquery.unveil.min.js -->
+    <script src="bower_components/jquery-unveil/jquery.unveil.min.js"></script>
+    <!-- endbuild -->
     <!-- build:js scripts/vendor/waypoints.min.js -->
     <script src="bower_components/jquery-waypoints/waypoints.min.js"></script>
     <!-- endbuild -->

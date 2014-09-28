@@ -54,7 +54,7 @@ header {
   @include transition(all 0.3s ease-in-out);
 }
 .container {
-    border-bottom:  2px dashed #E5E5E5;
+    border-bottom:  1px solid #E5E5E5;
     margin:  0 auto;
     padding:  100px 30px;
     max-width:  1140px;
@@ -158,7 +158,7 @@ h3 {
 }
 
 .overlay {
-    background: rgba(0,0,0, .6);
+    background: rgba(0,0,0, .8);
     height: 100%;
     left: 0;
     position: fixed;
@@ -243,10 +243,19 @@ h3 {
 }
 .skill-wrapper {
     flex: 1;
-    padding: 30px;
+    padding: 15px;
     position: relative;
     text-align: center;
     vertical-align:  top;
+      img {
+        opacity: 0;
+        @include transition(all 1.5s ease-in-out);
+        @include translateY(-30px);
+          &.loaded {
+            opacity: 1;
+            @include translateY(0px);
+          }
+      }
 }
 [class*='icon'] {
     height: 88px;
