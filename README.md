@@ -1,6 +1,6 @@
 # README #
 
-# To Run
-## git clone
-## npm install
-## bower install
+
+# git clone
+# npm install
+# bower install
