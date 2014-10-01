@@ -113,15 +113,15 @@ h3 {
     top:  40px;
     z-index:  15;
     @include transition(all 0.1s ease-in-out);
-     &.black span {
-        background:  black;
-     }
-     &.black span:before {
-        background: black;
-     }
-     &.black span:after {
-        background: black;
-     }
+        &.black span {
+            background:  black;
+        }
+        &.black span:before {
+            background: black;
+        }
+        &.black span:after {
+            background: black;
+        }
 }
 .lines span,
 .lines span:before,
@@ -148,13 +148,13 @@ h3 {
   top: 0;
 }
 .lines.close span {
-  background-color: transparent;
-   &:before {
-    @include rotate(45deg);
-   }
-   &:after {
-    @include rotate(-45deg);
-   }
+    background-color: transparent;
+        &:before {
+            @include rotate(45deg);
+        }
+        &:after {
+            @include rotate(-45deg);
+        }
 }
 
 .overlay {
@@ -248,15 +248,15 @@ h3 {
     position: relative;
     text-align: center;
     vertical-align:  top;
-      img {
-        opacity: 0;
-        @include transition(all 1.5s ease-in-out);
-        @include translateY(-30px);
-          &.loaded {
-            opacity: 1;
-            @include translateY(0px);
-          }
-      }
+        img {
+            opacity: 0;
+            @include transition(all 1.5s ease-in-out);
+            @include translateY(-30px);
+                &.loaded {
+                    opacity: 1;
+                    @include translateY(0px);
+                }
+        }
 }
 [class*='icon'] {
     height: 88px;
@@ -264,9 +264,33 @@ h3 {
 }
 .icon-development {
     top: 17px;
+        img {
+            @include animation-delay(.5s);
+        }
 }
 .icon-tools {
     top: 14px;
+        img {
+            @include animation-delay(1s);
+        }
+}
+/* Animate.css - http://daneden.me/animate - Licensed under the MIT license - http://opensource.org/licenses/MIT - Copyright (c) 2013 Daniel Eden */
+.animated {
+    @include animation-duration(1.5s);
+    @include animation-fill-mode(both);
+}
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        @include translate3d(0,-100%,0);
+    }
+    100% {
+        opacity: 1;
+        @include transform(none);
+    };
+}
+.fadeInDown {
+    @include animation-name(fadeInDown);
 }
 
 
@@ -280,6 +304,12 @@ h3 {
                     padding: 0 0 0 15px;
                 }
         }
+}
+
+/*Work*/
+.fa {
+    @include adjust-font-size-to(36px);
+    padding: 0 20px;
 }
 
 

@@ -36,6 +36,6 @@ $(document).ready(function() {
     });
     // Unveil Images
     $("#skills img").unveil(-100,function() {
-        $(this).addClass('loaded');
+        $(this).addClass('animated fadeInDown');
     });
 });
