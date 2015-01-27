@@ -44,6 +44,9 @@ a:hover {
 a:focus {
     outline: 0;
 }
+img {
+    max-width: 100%;
+}
 header {
     text-align: center;
 }
@@ -112,6 +115,9 @@ h3 {
     right: 85px;
     top:  40px;
     z-index:  15;
+    @media (max-width: 768px) {
+        display: none;
+    }
     @include transition(all 0.1s ease-in-out);
         &.black span {
             background:  black;
@@ -276,7 +282,7 @@ h3 {
 }
 /* Animate.css - http://daneden.me/animate - Licensed under the MIT license - http://opensource.org/licenses/MIT - Copyright (c) 2013 Daniel Eden */
 .animated {
-    @include animation-duration(1.5s);
+    @include animation-duration(1s);
     @include animation-fill-mode(both);
 }
 @keyframes fadeInDown {
@@ -310,6 +316,18 @@ h3 {
 .fa {
     @include adjust-font-size-to(36px);
     padding: 0 20px;
+}
+.work-peice {
+    text-align: left;
+    img {
+        margin-bottom: 24px;
+    }
+    h3 {
+        text-align: left;
+    }
+    p {
+        width: 50%;
+    }
 }
 
 
