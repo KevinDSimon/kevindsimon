@@ -16,8 +16,8 @@ $(document).ready(function() {
     });
     //Toggle hamburger icon
     $('.lines').click(function(){
-        $('.lines').toggleClass('close');
-        $('.overlay').toggleClass('open');
+        $('.lines').toggleClass('close white');
+        $('.overlay').toggleClass('open');  
     });
     //Parallax
     $objWindow = $(window);
@@ -34,12 +34,12 @@ $(document).ready(function() {
     });
     //Waypoints
     $('#about').waypoint(function(direction) {
-        // hide logo 1200 and under
+        /* hide logo 1224 and under
         if ($(window).width() <= 1224){ 
             $('.logo').hide();
-        }
+        }*/
         // do this on the way down
-        else if (direction === 'down') {
+        if (direction === 'down') {
             $('.lines').addClass('black');
             $('.logo').fadeIn('slow');
         }

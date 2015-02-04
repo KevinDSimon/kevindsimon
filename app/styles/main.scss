@@ -106,7 +106,7 @@ h2:after {
     background: $brand;
 }
 h3 {
-    margin-bottom:  24px;
+    margin-bottom:  12px;
 }
 
 /*Navigation */
@@ -116,6 +116,16 @@ h3 {
     top:  40px;
     z-index:  15;
     @include transition(all 0.1s ease-in-out);
+        /*&:before {
+          content: "";
+          display: inline-block;
+          height: 38px;
+          width: 42px;
+          background-color: rgba(0,0,0,.60);
+          position: absolute;
+          top: -16px;
+          left: -6px;
+        }*/
         &.black span {
             background:  black;
         }
@@ -124,6 +134,12 @@ h3 {
         }
         &.black span:after {
             background: black;
+        }
+        &.black.white span:before {
+            background: white;
+        }
+        &.black.white span:after {
+            background: white;
         }
 }
 .lines span,
@@ -245,6 +261,9 @@ h3 {
     display: none;
     width: 54px;
     background-size: cover;
+      @media screen and (max-width: 1224px) {
+        display: none!important;
+      }
 }
 
 /* Animate.css - http://daneden.me/animate - Licensed under the MIT license - http://opensource.org/licenses/MIT - Copyright (c) 2013 Daniel Eden */
@@ -345,7 +364,7 @@ h3 {
 
 /*Work*/
 .work-peice {
-    margin-bottom: 100px;
+    margin-bottom: 8%;
     text-align: left;
     img {
         margin-bottom: 28px;
