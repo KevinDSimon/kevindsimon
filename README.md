@@ -1,11 +1,7 @@
- # README # 
-
 ## Installation Instructions ##
 
 **Install Node.js**
 http://nodejs.org/
-
-**Clone repository**
 
 **Install Bower and Grunt**
 
