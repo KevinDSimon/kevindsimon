@@ -1,3 +1,9 @@
+$(window).load(function(){
+  setTimeout(function(){
+    $('#loading').fadeOut(300);
+    $('body').removeClass('active');
+  }, 1500);
+});
 $(document).ready(function() {
     //Smooth Scroll
     $(function() {
