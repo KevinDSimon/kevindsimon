@@ -13,7 +13,7 @@
     <!-- endbower -->
     <!-- endbuild -->
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,900' rel='stylesheet' type='text/css'>
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
@@ -60,7 +60,7 @@
                 </header>
                 <article>
                     <div class="skill-wrapper">
-                        <div class="icon-design"><img data-src="images/design.svg"/></div>
+                        <div class="icon-design"><img src="images/design.svg" data-src="images/design.svg"/></div>
                         <h3>Design</h3>
                         <ul>
                             <li>User Interface</li>
@@ -70,7 +70,7 @@
                         </ul>   
                     </div>
                     <div class="skill-wrapper">
-                        <div class="icon-development"><img data-src="images/development.svg"/></div>
+                        <div class="icon-development"><img src="images/development.svg" data-src="images/development.svg"/></div>
                         <h3>Development</h3>
                         <ul>
                             <li>HTML5</li>
@@ -80,7 +80,7 @@
                         </ul>  
                     </div>
                     <div class="skill-wrapper">
-                        <div class="icon-tools"><img data-src="images/tools.svg"/></div>
+                        <div class="icon-tools"><img src="images/tools.svg" data-src="images/tools.svg"/></div>
                         <h3>Tools</h3>
                         <ul>
                             <li>Git / SVN</li>
@@ -176,8 +176,8 @@
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/jquery-waypoints/lib/noframework.waypoints.min.js"></script>
     <script src="bower_components/jquery-unveil/jquery.unveil.js"></script>
-    <script src="bower_components/jquery-waypoints/waypoints.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -191,12 +191,6 @@
       ga('create','UA-XXXXX-X');ga('send','pageview');
     </script>
 
-    <!-- build:js scripts/vendor/jquery.unveil.min.js -->
-    <script src="bower_components/jquery-unveil/jquery.unveil.min.js"></script>
-    <!-- endbuild -->
-    <!-- build:js scripts/vendor/waypoints.min.js -->
-    <script src="bower_components/jquery-waypoints/waypoints.min.js"></script>
-    <!-- endbuild -->
     <!-- build:js({app,.tmp}) scripts/main.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->

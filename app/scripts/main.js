@@ -40,22 +40,13 @@ $(document).ready(function() {
         }
     });
     //Waypoints
-    $('#about').waypoint(function(direction) {
-        /* hide logo 1224 and under
-        if ($(window).width() <= 1224){ 
-            $('.logo').hide();
-        }*/
-        // do this on the way down
-        if (direction === 'down') {
-            $('.lines').addClass('black');
-            $('.logo').fadeIn('slow');
-        }
-        // do this on the way back up through the waypoint
-        else {
-            $('.lines').removeClass('black');
-            $('.logo').fadeOut('slow');
-        }       
-    });
+    var waypoint = new Waypoint({
+      element: document.getElementById('about'),
+      handler: function(direction) {
+        $('.lines').toggleClass('black');
+        $('.logo').fadeToggle('slow');
+      }
+    })
     // Unveil
     $('#skills img').unveil(-100,function() {
         $(this).addClass('animated fadeInDown');
