@@ -2,37 +2,174 @@
 <html class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>root</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
-    <link rel="shortcut icon" href="/favicon.ico">
+    <title>S I M O N</title>
+    <meta name="description" content="Kevin Simon, graphic designer from Chicago, IL portfolio website">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon-precomposed" HREF="apple-touch-icon.png" />
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <!-- endbower -->
     <!-- endbuild -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,900' rel='stylesheet' type='text/css'>
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
-
   </head>
   <body>
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+    <div id="loading"></div>
+    <div class="main-wrapper">
+        
+        <header id="home" class="hero" class="bg_parralax" data-type="background" data-speed="5">
+          <div class="container">
+            <img src="images/logo-white.png"/>
+          </div>
+        </header> 
 
+        <section id="about">
+            <div class="container">
+                <header><h2>About Me</h2></header>
+                <article>
+                    <div>
+                        <p>My name is Kevin Simon, and I am a graphic designer from Chicago, IL. My background was straight print design, before I opened up Dreamweaver CS3 at the age of 17. Ever since then, I have been striving to improve my skills in a variety of mediums. I currently work at Vivid Seats, a secondary ticket marketplace leader, where my time is divided between production and web development.</p>
+                        <p>I have extensive experience in Photoshop, Illustrator, InDesign and Dreamweaver and am very proficient in HTML and CSS.</p>
+                    </div>
+                    <div>
+                        <p>Design is my passion. It surrounds me always and affects all my decisions. The best part of being a graphic designer is the opportunity to create unique things and share them with others. Most of the time, nobody knows the face behind a design, but it is always rewarding to know that you were a part of the creation.</p>
+                        <p>When I'm not online, I am fishing, golfing, or out with a camera in hand.</p>
+                    </div>
+                </article>
+                <div class="center">
+                    <a href="images/kevin-simon-resume.pdf" class="btn" title="Kevin Simon Resume" target="_blank">View My Resume</a>
+                </div>
+            </div>
+        </section>
 
-    <div class="hero-unit">
-      <h1>&apos;Allo, &apos;Allo!</h1>
-      <p>You now have</p>
-      <ul>
-      <li>HTML5 Boilerplate</li>
-      <li>Sass</li>
-      <li>Modernizr</li>
-      </ul>
+        <section id="skills">
+            <div class="container">
+                <header>
+                    <h2>Skills</h2>
+                </header>
+                <article>
+                    <div class="skill-wrapper">
+                        <div class="icon-design"><img src="images/design.svg" data-src="images/design.svg"/></div>
+                        <h3>Design</h3>
+                        <ul>
+                            <li>User Interface</li>
+                            <li>Responsive</li>
+                            <li>Branding</li>
+                            <li>Print</li>
+                        </ul>   
+                    </div>
+                    <div class="skill-wrapper">
+                        <div class="icon-development"><img src="images/development.svg" data-src="images/development.svg"/></div>
+                        <h3>Development</h3>
+                        <ul>
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>Sass / Less</li>
+                            <li>Compass</li>
+                        </ul>  
+                    </div>
+                    <div class="skill-wrapper">
+                        <div class="icon-tools"><img src="images/tools.svg" data-src="images/tools.svg"/></div>
+                        <h3>Tools</h3>
+                        <ul>
+                            <li>Git / SVN</li>
+                            <li>Command Line</li>
+                            <li>Jira</li>
+                            <li>WordPress</li>
+                        </ul>  
+                    </div>
+                </article>
+            </div>
+        </section> 
+
+        <section id="work">
+            <div class="container">
+                <header>
+                    <h2>Work</h2>
+                </header>
+                <article class="work-peice">
+                    <img src="images/seller-landing.jpg" title="Seller Landing Page" alt="Seller Landing Page" />
+                    <header><h3><a href="http://www.vividseats.com/sell/intro.html" title="Seller Landing Page" target="_blank">Seller Landing Page</a></h3></header>
+                    <footer>
+                        <p>A graphic heavy landing page that lays out step by step how to sell fan tickets. This page was tailored for older alumni of partner schools who are tech inept.</p>
+                    </footer>
+                </article>
+                <article class="work-peice">
+                    <img src="images/error-page.jpg" title="Error Page Template" alt="Error Page Template" />
+                    <header><h3><a href="http://www.vividseats.com/404.html" title="Error Page Template" target="_blank">Error Page Template</a></h3></header>
+                    <footer>
+                        <p>An error page template designed to serve up multiple HTTP status messages.</p>
+                    </footer>
+                </article>
+                <article class="work-peice">
+                    <img src="images/event-page.jpg" title="Event Page" alt="Event Page" />
+                    <header><h3>Event Page Concept</h3></header>
+                    <footer>
+                        <p>A varient of an event page A/B test where information was rearanged and visuals enhanced.</p>
+                    </footer>
+                </article>
+                <article class="work-peice">
+                    <img src="images/multi-package.jpg" title="Package Builder" alt="Package Builder" />
+                    <header><h3>Package Builder</h3></header>
+                    <footer>
+                        <p>A package builder concept designed for minimal user scrolling.</p>
+                    </footer>
+                </article>
+                <article class="work-peice">
+                    <img src="images/company-nav.jpg" title="Company Navigation" alt="Company Navigation" />
+                    <header><h3>Company Navigation</h3></header>
+                    <footer>
+                        <p>An off-canvas company navigation concept.</p>
+                    </footer>
+                </article>
+                <article class="work-peice">
+                    <img src="images/mobile-app.jpg" title="Vivid Seats Mobile App" alt="Vivid Seats Mobile App" />
+                    <header><h3>Vivid Seats Mobile App</h3></header>
+                    <footer>
+                        <p>A convenient way to buy tickets to top sports, concert, and theater events.</p>
+                    </footer>
+                </article>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <header>
+                    <h2>Contact</h2>
+                    <div class="availability color-green"><span class="status green"></span>Available for freelance</div>
+                    <p>Like what you see? Say 'hi' using any of the methods below!</p>
+                </header>
+                <div class="center">
+                    <a href="mailto:kevindsimon@aol.com?Subject=Portfolio%20Contact" title="Email Me"><i class="fa fa-envelope email"></i></a>
+                    <a href="http://www.linkedin.com/pub/kevin-simon/27/4b5/412" target="_blank" title="Connect with me on LinkedIn"><i class="fa fa-linkedin linkedIn"></i></a>
+                    <a href="https://dribbble.com/KevinDSimon" target="_blank" title="View more of my work on Dribbble"><i class="fa fa-dribbble dribbble"></i></a>
+                </div>
+        </section>           
+
+    </div><!-- main wrapper -->
+
+    <img src="images/floating-logo.png" class="logo">
+    <div class="lines"><span></span></div>
+    <div class="overlay overlay-hugeinc">
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </div>
 
 
@@ -49,11 +186,17 @@
       e=o.createElement(i);r=o.getElementsByTagName(i)[0];
       e.src='//www.google-analytics.com/analytics.js';
       r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
+      ga('create','UA-26546021-5');ga('send','pageview');
     </script>
-
-        <!-- build:js({app,.tmp}) scripts/main.js -->
-        <script src="scripts/main.js"></script>
-        <!-- endbuild -->
+    
+    <!-- build:js({app,.tmp}) scripts/main.js -->
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+    <!-- build:js(./) scripts/vendor/noframework.waypoints.min.js -->
+    <script src="bower_components/jquery-waypoints/lib/noframework.waypoints.min.js"></script>
+    <!-- endbuild -->
+    <!-- build:js(./) scripts/vendor/jquery.unveil.js -->
+    <script src="bower_components/jquery-unveil/jquery.unveil.js"></script>
+    <!-- endbuild -->
 </body>
 </html>
