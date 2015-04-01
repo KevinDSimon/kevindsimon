@@ -16,6 +16,9 @@ module.exports = function (grunt) {
   // Load grunt tasks automatically
   require('load-grunt-tasks')(grunt);
 
+  // Load github pages
+  grunt.loadNpmTasks('grunt-gh-pages');
+
   // Configurable paths
   var config = {
     app: 'app',
@@ -371,7 +374,17 @@ module.exports = function (grunt) {
         'imagemin',
         'svgmin'
       ]
+    },
+
+    // Push to gh-pages branch on github
+    'gh-pages': {
+      options: {
+        base: 'dist',
+        message: '<%= timestamp %>'
+      },
+      src: ['**']
     }
+
   });
 
 
