@@ -39,3 +39,9 @@ grunt serve
 ```
 grunt build
 ```
+
+## To Build to gh-pages ##
+
+```
+grunt gh-pages
+```
