@@ -379,7 +379,8 @@ module.exports = function (grunt) {
     // Push to gh-pages branch on github
     'gh-pages': {
       options: {
-        base: 'dist'
+        base: 'dist',
+        message: '<%= grunt.template.today("yyyy-mm-dd hh:mm:ss") %>'
       },
       src: ['**']
     }
