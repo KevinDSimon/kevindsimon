@@ -5,7 +5,7 @@
 @import "compass";
 @import "compass/reset";
 
-/* Color Variables*/
+/* Variables*/
 $brand: #27AE60;
 $base-font-color: #444;
 $base-font: 'Lato', sans-serif; /*300, 400, 900*/
@@ -164,7 +164,7 @@ h3 {
   @include transition(all 0.1s ease-in-out);
 }
 .lines span:before {
-  top: -10px; 
+  top: -10px;
 }
 .lines span:after {
   bottom: -10px;
@@ -246,7 +246,7 @@ h3 {
     position: relative;
     height:  100vh;
     width:  100vw;
-    text-align: center; 
+    text-align: center;
       .container {
         border-bottom: none;
       }
@@ -262,7 +262,7 @@ h3 {
     img {
       margin-top: 30%;
       width: 50%;
-    }  
+    }
 }
 .logo {
     position: fixed;
@@ -355,25 +355,9 @@ h3 {
 }
 
 /* About */
-#about  article {
-    display: flex;
-    flex-direction: row;
-        div {
-            flex: 1;
-            padding: 0 15px 0 0;
-                + div {
-                    padding: 0 0 0 15px;
-                      @media screen and (max-width: 768px) {
-                        padding: 0;
-                      }
-                }
-          @media screen and (max-width: 768px) {
-            padding: 0;
-          }  
-        }
-    @media screen and (max-width: 768px) {
-      flex-direction: column;
-    }
+#about  article p {
+  margin: 0 auto;
+  max-width: 829px;
 }
 
 /*Work*/

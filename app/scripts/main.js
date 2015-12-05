@@ -25,7 +25,7 @@ $(document).ready(function() {
     //Toggle hamburger icon
     $('.lines').click(function(){
         $('.lines').toggleClass('close white');
-        $('.overlay').toggleClass('open');  
+        $('.overlay').toggleClass('open');
     });
     //Parallax
     $objWindow = $(window);
@@ -37,7 +37,7 @@ $(document).ready(function() {
                 var coords = '100% '+ yPos + 'px';
                 // Change the position of background
                 $bgObj.css({ backgroundPosition: coords });
-            });     
+            });
         }
     });
     //Waypoints
@@ -52,4 +52,6 @@ $(document).ready(function() {
     $('#skills img').unveil(-100,function() {
         $(this).addClass('animated fadeInDown');
     });
+    //Twenty Twenty
+    $("#twentytwenty").twentytwenty();
 });

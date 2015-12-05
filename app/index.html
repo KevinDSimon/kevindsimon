@@ -9,6 +9,7 @@
     <link rel="apple-touch-icon-precomposed" HREF="apple-touch-icon.png" />
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
+    <link rel="stylesheet" href="bower_components/twentytwenty/css/twentytwenty.css">
     <!-- bower:css -->
     <!-- endbower -->
     <!-- endbuild -->
@@ -16,6 +17,7 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/twentytwenty-override.css">
     <!-- endbuild -->
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="bower_components/modernizr/modernizr.js"></script>
@@ -27,27 +29,22 @@
     <![endif]-->
     <div id="loading"></div>
     <div class="main-wrapper">
-        
+
         <header id="home" class="hero" class="bg_parralax" data-type="background" data-speed="5">
           <div class="container">
             <img src="images/logo-white.png"/>
           </div>
-        </header> 
+        </header>
 
         <section id="about">
-            <div class="container">
+            <div class="container center">
                 <header><h2>About Me</h2></header>
                 <article>
                     <div>
-                        <p>My name is Kevin Simon, and I am a graphic designer from Chicago, IL. My background was straight print design, before I opened up Dreamweaver CS3 at the age of 17. Ever since then, I have been striving to improve my skills in a variety of mediums. I currently work at Vivid Seats, a secondary ticket marketplace leader, where my time is divided between production and web development.</p>
-                        <p>I have extensive experience in Photoshop, Illustrator, InDesign and Dreamweaver and am very proficient in HTML and CSS.</p>
-                    </div>
-                    <div>
-                        <p>Design is my passion. It surrounds me always and affects all my decisions. The best part of being a graphic designer is the opportunity to create unique things and share them with others. Most of the time, nobody knows the face behind a design, but it is always rewarding to know that you were a part of the creation.</p>
-                        <p>When I'm not online, I am fishing, golfing, or out with a camera in hand.</p>
+                        <p>I'm Kevin, a passionate web designer and developer based in Chicago, IL. I currently work at Centro, an ad tech company where we develop digital advertising and media management software to help advertisers streamline and scale digital campaigns. My time at Centro is divided between design and front-end development. With a love for clean design and code I understand that a perfect user interface looks good, but works even better</p>
                     </div>
                 </article>
-                <div class="center">
+                <div>
                     <a href="images/kevin-simon-resume.pdf" class="btn" title="Kevin Simon Resume" target="_blank">View My Resume</a>
                 </div>
             </div>
@@ -65,9 +62,8 @@
                         <ul>
                             <li>User Interface</li>
                             <li>Responsive</li>
-                            <li>Branding</li>
-                            <li>Print</li>
-                        </ul>   
+                            <li>Graphic</li>
+                        </ul>
                     </div>
                     <div class="skill-wrapper">
                         <div class="icon-development"><img src="images/development.svg" data-src="images/development.svg"/></div>
@@ -75,29 +71,38 @@
                         <ul>
                             <li>HTML5</li>
                             <li>CSS3</li>
-                            <li>Sass / Less</li>
-                            <li>Compass</li>
-                        </ul>  
+                            <li>Sass</li>
+                        </ul>
                     </div>
                     <div class="skill-wrapper">
                         <div class="icon-tools"><img src="images/tools.svg" data-src="images/tools.svg"/></div>
                         <h3>Tools</h3>
                         <ul>
-                            <li>Git / SVN</li>
-                            <li>Command Line</li>
-                            <li>Jira</li>
-                            <li>WordPress</li>
-                        </ul>  
+                            <li>Sketch</li>
+                            <li>Atom</li>
+                            <li>Git</li>
+                        </ul>
                     </div>
                 </article>
             </div>
-        </section> 
+        </section>
 
         <section id="work">
             <div class="container">
                 <header>
                     <h2>Work</h2>
                 </header>
+                <article class="work-peice">
+                  <div id="twentytwenty">
+                     <img src="images/day.jpg" />
+                     <img src="images/night.jpg" />
+                  </div>
+                    <header><h3><a href="http://techblog.centro.net/ui-design/from-dusk-till-dawn/" title="Centro Tech Blog Nighttime Theme" target="_blank">Centro Tech Blog Nighttime Theme</a></h3></header>
+                    <footer>
+                        <p>An adaptive blog theme that offers readers a healthier, more pleasent nighttime experience.</p>
+                    </footer>
+                </article>
+
                 <article class="work-peice">
                     <img src="images/seller-landing.jpg" title="Seller Landing Page" alt="Seller Landing Page" />
                     <header><h3><a href="http://www.vividseats.com/sell/intro.html" title="Seller Landing Page" target="_blank">Seller Landing Page</a></h3></header>
@@ -146,7 +151,7 @@
             <div class="container">
                 <header>
                     <h2>Contact</h2>
-                    <div class="availability color-green"><span class="status green"></span>Available for freelance</div>
+                    <div class="availability color-green"><span class="status green"></span>Available for freelance work</div>
                     <p>Like what you see? Say 'hi' using any of the methods below!</p>
                 </header>
                 <div class="center">
@@ -154,7 +159,7 @@
                     <a href="http://www.linkedin.com/pub/kevin-simon/27/4b5/412" target="_blank" title="Connect with me on LinkedIn"><i class="fa fa-linkedin linkedIn"></i></a>
                     <a href="https://dribbble.com/KevinDSimon" target="_blank" title="View more of my work on Dribbble"><i class="fa fa-dribbble dribbble"></i></a>
                 </div>
-        </section>           
+        </section>
 
     </div><!-- main wrapper -->
 
@@ -190,7 +195,7 @@
       ga('send', 'pageview');
 
     </script>
-    
+
     <!-- build:js({app,.tmp}) scripts/main.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
@@ -199,6 +204,12 @@
     <!-- endbuild -->
     <!-- build:js(./) scripts/vendor/jquery.unveil.js -->
     <script src="bower_components/jquery-unveil/jquery.unveil.js"></script>
+    <!-- endbuild -->
+    <!-- build:js(./) scripts/vendor/jquery.event.move.js -->
+    <script src="bower_components/twentytwenty/js/jquery.event.move.js"></script>
+    <!-- endbuild -->
+    <!-- build:js(./) scripts/vendor/jquery.twentytwenty.js -->
+    <script src="bower_components/twentytwenty/js/jquery.twentytwenty.js"></script>
     <!-- endbuild -->
 </body>
 </html>
