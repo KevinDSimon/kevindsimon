@@ -1,8 +1,11 @@
 $(window).load(function(){
+  //Preloader
   setTimeout(function(){
     $('#loading').fadeOut(300);
     $('body').removeClass('active');
   }, 1500);
+  //TwentyTwenty
+  $("#twentytwenty").twentytwenty();
 });
 $(document).ready(function() {
     //Smooth Scroll
@@ -52,6 +55,4 @@ $(document).ready(function() {
     $('#skills img').unveil(-100,function() {
         $(this).addClass('animated fadeInDown');
     });
-    //Twenty Twenty
-    $("#twentytwenty").twentytwenty();
 });
