@@ -45,7 +45,7 @@ export default class extends React.Component {
           })}
         </div>
         <div onClick={moveToNextCard} className="Next-card">
-          <span>Click to slide</span>
+          <span>Click, tap ({activecard + 1} of {children.length})</span>
         </div>
         <SwipeableViews
           index={activecard}

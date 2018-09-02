@@ -9,14 +9,16 @@ export default () => {
       <h1>My Toolbox</h1>
       <p>
         <Pill>UI Design</Pill>
+        <Pill>Responsive Design</Pill>
+        <Pill>Visual Hierarchy</Pill>
         <Pill>Information Hierarchy</Pill>
-        <Pill>Agile</Pill>
         <Pill>Rapid Prototyping</Pill>
         <Pill>Sketch App</Pill>
         <Pill>Marvel</Pill>
         <Pill>HTML/CSS</Pill>
         <Pill>Jira</Pill>
         <Pill>Aha!</Pill>
+        <Pill>Agile</Pill>
         <Pill>Git</Pill>
       </p>
     </div>
