@@ -13,7 +13,6 @@ export default class extends React.Component {
         {this.props.children}
         <style jsx>{`
           .Pill {
-            color: black;
             display: inline-block;
             margin: 0 .5em .5em 0;
             text-align: center;

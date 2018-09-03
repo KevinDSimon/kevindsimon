@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import TwentyTwenty from 'react-twentytwenty';
 import Slider from '../components/slider';
 
 export default class extends React.Component {
@@ -68,28 +67,10 @@ export default class extends React.Component {
               <img src="../static/Centro Website/Centro Website 11.png" />
             </Slider>
           </div>
-          {/* <div className="Work--piece">
-            <h1>From Dusk till Dawn</h1>
-            <p>An adaptive blog theme that offers readers a healthier, more pleasent nighttime experience.</p>
-            <div style={{ marginTop: '3em', boxShadow: "0 35px 50px rgba(0,0,0,.20)" }}>
-              <TwentyTwenty
-                left={<img src="../static/day.jpg" width="100%" />}
-                right={<img src="../static/night.jpg" width="100%" />}
-                slider={<div className="Slider" />}
-              />
-            </div>
-          </div> */}
         </div>
         <style jsx>{`
           .Work--piece {
             margin-bottom: 96px;
-          }
-          .Slider {
-            height: 100%;
-            width: 3px;
-            background-color: white;
-            cursor: col-resize;
-            box-shadow: 0 3px 0 white, 0 0 12px rgba(51,51,51,.5);
           }
         `}</style>
       </div>

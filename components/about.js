@@ -10,7 +10,7 @@ export default () => {
 
       <p>I am based in Chicago, IL where I live with my beautiful fiancé Carrie. My professional career began in 2012 as a Graphic Designer at Vivid Seats–an event ticket marketplace. After 3 years, I joined Centro–one of the leaders in digital advertising in the summer of 2015. As a Senior UI Designer, I've developed and extended a system of design standards across Centro’s product suite while producing features and enhancements in order to simplify and speed up experiences for internal and external clients.</p>
 
-      <p>I understand that the perfect user interface looks good, but works even better due to my passion for clean design and code.</p>
+      <p>I understand a good user interface looks good, but works even better</p>
 
       <p><a href="../static/kevin-simon-resume.pdf" title="Kevin Simon Resume" target="_blank">Résumé</a></p>
 

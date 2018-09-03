@@ -14,6 +14,7 @@ export default () => {
         <Pill>Information Hierarchy</Pill>
         <Pill>Rapid Prototyping</Pill>
         <Pill>Sketch App</Pill>
+        <Pill>Adobe Creative Suite</Pill>
         <Pill>Marvel</Pill>
         <Pill>HTML/CSS</Pill>
         <Pill>Jira</Pill>

@@ -6,7 +6,6 @@ import About from '../components/about';
 import Toolbox from '../components/toolbox';
 import Work from '../components/work';
 import Contact from '../components/contact';
-
 import Status from '../components/status';
 
 export default () => (
@@ -26,15 +25,12 @@ export default () => (
         box-sizing: border-box;
       }
       body  {
-        // Lato Weight 300, 400, 900
-        // font-family: 'Lato', sans-serif;
         // Merriweather Weight 300, 300i, 400, 400i, 700, 700i, 900, 900i
         font-family: 'Merriweather', serif;
         font-weight: 400;
         font-size: 18px;
         line-height: 1.75;
-        // background: rgb(246, 246, 246);
-        color: black;
+        color: #131516;
       }
       h1 {
         font-size: 64px;
