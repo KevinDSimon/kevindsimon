@@ -1,35 +1,18 @@
 {
-  "name": "root",
-  "devDependencies": {
-    "apache-server-configs": "^2.7.1",
-    "grunt": "^0.4.5",
-    "grunt-autoprefixer": "^1.0.0",
-    "grunt-concurrent": "^0.5.0",
-    "grunt-contrib-clean": "^0.6.0",
-    "grunt-contrib-compass": "^1.0.1",
-    "grunt-contrib-concat": "^0.5.0",
-    "grunt-contrib-connect": "^0.8.0",
-    "grunt-contrib-copy": "^0.5.0",
-    "grunt-contrib-cssmin": "^0.10.0",
-    "grunt-contrib-htmlmin": "^0.3.0",
-    "grunt-contrib-imagemin": "^0.8.0",
-    "grunt-contrib-jshint": "^0.10.0",
-    "grunt-contrib-sass": "^0.7.3",
-    "grunt-contrib-uglify": "^0.5.1",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-gh-pages": "^0.10.0",
-    "grunt-mocha": "^0.4.10",
-    "grunt-modernizr": "^0.5.2",
-    "grunt-newer": "^0.7.0",
-    "grunt-rev": "^0.1.0",
-    "grunt-svgmin": "^0.4.0",
-    "grunt-usemin": "^2.3.0",
-    "grunt-wiredep": "^1.7.0",
-    "jshint-stylish": "^0.4.0",
-    "load-grunt-tasks": "^0.4.0",
-    "time-grunt": "^0.4.0"
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "export": "next export",
+    "deploy": "next build && next export && cp -R ./CNAME ./out/ && cp -R ./robots.txt ./out/ && git add out/ && git commit -m \"Deploy gh-pages\" && git subtree push --prefix out origin gh-pages"
   },
-  "engines": {
-    "node": ">=0.10.0"
+  "dependencies": {
+    "next": "^6.1.1",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-scroll": "^1.7.6",
+    "react-scroll-parallax": "^1.2.1",
+    "react-swipeable-views": "^0.12.16",
+    "react-waypoint": "^8.0.0"
   }
 }
