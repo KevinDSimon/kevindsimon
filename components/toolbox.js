@@ -10,15 +10,12 @@ export default () => {
       <p>
         <Pill>UI Design</Pill>
         <Pill>Responsive Design</Pill>
-        <Pill>Visual Hierarchy</Pill>
         <Pill>Information Hierarchy</Pill>
         <Pill>Rapid Prototyping</Pill>
         <Pill>Sketch App</Pill>
         <Pill>Adobe Creative Suite</Pill>
-        <Pill>Marvel</Pill>
-        <Pill>HTML/CSS</Pill>
-        <Pill>Jira</Pill>
-        <Pill>Aha!</Pill>
+        <Pill>InVision/Marvel</Pill>
+        <Pill>HTML/CSS/JS</Pill>
         <Pill>Agile</Pill>
         <Pill>Git</Pill>
       </p>
