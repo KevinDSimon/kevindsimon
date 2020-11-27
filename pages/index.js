@@ -34,6 +34,7 @@ export default () => (
       }
       h1 {
         font-size: 64px;
+        font-style: italic;
         line-height: 1.2;
         font-weight: 900;
         width: 50%;
@@ -59,13 +60,11 @@ export default () => (
         display: flex;
         flex-direction: column-reverse;
         -webkit-box-orient: vertical;
+        margin-bottom: 96px;
       }
       .Container {
         margin: 0 auto;
-        padding: 0 48px;
-        padding-left: 150px;
-        // max-width: 1224px;
-        // width: 100%;
+        padding: 0 48px 0 150px;
         width: 1224px;
       }
       .Section {

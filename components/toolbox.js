@@ -8,16 +8,17 @@ export default () => {
       <div className="Section--label">Skills & Tools</div>
       <h1>My Toolbox</h1>
       <p>
-        <Pill>UI Design</Pill>
+        <Pill>UI/UX Design</Pill>
         <Pill>Responsive Design</Pill>
+        <Pill>Native App Design</Pill>
         <Pill>Information Hierarchy</Pill>
         <Pill>Rapid Prototyping</Pill>
+        <Pill>Figma</Pill>
         <Pill>Sketch App</Pill>
-        <Pill>Adobe Creative Suite</Pill>
-        <Pill>InVision/Marvel</Pill>
-        <Pill>HTML/CSS/JS</Pill>
-        <Pill>Agile</Pill>
+        <Pill>InVision</Pill>
+        <Pill>HTML/CSS</Pill>
         <Pill>Git</Pill>
+        <Pill>Agile</Pill>
       </p>
     </div>
 
