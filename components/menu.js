@@ -10,6 +10,7 @@ export default ({ onSelect }) => {
           <ul>
             <li>
               <Link
+                className="NavLink"
                 activeClass="active"
                 to="Home"
                 spy={true}
@@ -23,6 +24,7 @@ export default ({ onSelect }) => {
             </li>
             <li>
               <Link
+                className="NavLink"
                 activeClass="active"
                 to="About"
                 spy={true}
@@ -36,6 +38,7 @@ export default ({ onSelect }) => {
             </li>
             <li>
               <Link
+                className="NavLink"
                 activeClass="active"
                 to="Toolbox"
                 spy={true}
@@ -44,11 +47,12 @@ export default ({ onSelect }) => {
                 ignoreCancelEvents={false}
                 onClick={onSelect}
               >
-                Skills & Tools
+                Skills
               </Link>
             </li>
             <li>
               <Link
+                className="NavLink"
                 activeClass="active"
                 to="Work"
                 spy={true}
@@ -62,6 +66,7 @@ export default ({ onSelect }) => {
             </li>
             <li>
               <Link
+                className="NavLink"
                 activeClass="active"
                 to="Contact"
                 spy={true}
@@ -77,7 +82,13 @@ export default ({ onSelect }) => {
         </nav>
         <style global jsx>{`
           body {
-            overflow: hidden;
+            overflow-x: hidden;
+          }
+          a.NavLink {
+            color: black;
+          }
+          a.NavLink:hover {
+            text-decoration: underline;
           }
         `}</style>
         <style jsx>{`
@@ -92,12 +103,14 @@ export default ({ onSelect }) => {
           }
           .Overlay nav {
             font-size: 64px;
-            line-height: 1.2;
+            line-height: 1.25;
             font-weight: 900;
             padding-top: 96px;
           }
-          .Overlay a {
-            color: black!important;
+          @media (max-width: 1224px) {
+            .Overlay nav {
+              padding-top: 192px;
+            }
           }
         `}</style>
       </div>

@@ -1,5 +1,6 @@
 import Layout from '../components/layout';
 import Head from 'next/head';
+import Nav from '../components/nav';
 import Hero from '../components/hero';
 import Photos from '../components/photos';
 import About from '../components/about';
@@ -12,6 +13,7 @@ export default () => (
 
   <div>
     <Layout>
+      <Nav />
       <Hero />
       <Photos />
       <About />
@@ -37,7 +39,6 @@ export default () => (
         font-style: italic;
         line-height: 1.2;
         font-weight: 900;
-        width: 50%;
       }
       a {
         cursor: pointer;
@@ -65,7 +66,7 @@ export default () => (
       .Container {
         margin: 0 auto;
         padding: 0 48px 0 150px;
-        width: 1224px;
+        max-width: 1224px;
       }
       .Section {
         padding-top: 96px;
@@ -89,12 +90,32 @@ export default () => (
         background: #27AE60;
       }
       .Section p, .Section ul {
-        width: 30em;
+        width: 35em;
         margin-top: 1.5em;
         margin-bottom: 1.5em;
       }
       .Margin {
         margin-top: 100px;
+      }
+      @media (max-width: 1224px) {
+        .Container {
+          padding: 0 48px;
+          width: 100%;
+        }
+        h1 {
+          font-size: 64px;
+        }
+        .Section p, .Section ul {
+          width: 100%;
+        }
+      }
+      @media (max-width: 375px) {
+        .Container {
+          padding: 0 24px;
+        }
+        h1 {
+          font-size: 44px;
+        }
       }
     `}</style>
   </div>

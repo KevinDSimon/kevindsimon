@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Menu from './menu';
+import { Link, DirectLink, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
 
 export default class extends React.Component {
 
@@ -12,14 +13,28 @@ export default class extends React.Component {
       isClosed : !this.state.isClosed
     });
   }
+  handleLogoClick = () => {
+    this.setState({
+      isClosed : true
+    });
+  }
 
   render() {
     return (
       <div>
         <div className="Logo">
-          <img src="../static/floating-logo.png" />
+          <Link
+            to="Home"
+            spy={true}
+            smooth={true}
+            duration={500}
+            ignoreCancelEvents={false}
+            onClick={this.handleLogoClick}
+          >
+            <img src="../static/letter-mark.svg" />
+          </Link>
         </div>
-        {/* <div
+        <div
           className={"Lines " + (this.state.isClosed ? ' ' : 'Close')}
           onClick={this.handleClick}
         >
@@ -27,11 +42,11 @@ export default class extends React.Component {
         </div>
         {this.state.isClosed ? '' :
           <Menu onSelect={this.handleClick} />
-        } */}
+        }
         <style jsx>{`
           .Logo {
-            position: absolute;
-            left: 48px;
+            position: relative;
+            left: -100px;
             top: 100px;
             z-index: 50;
           }
@@ -42,7 +57,7 @@ export default class extends React.Component {
           .Lines {
             cursor: pointer;
             position: fixed;
-            right: 138px;
+            right: 12.75%;
             top: 118px;
             height: 19px;
             width: 25px;
@@ -81,6 +96,22 @@ export default class extends React.Component {
           }
           .Lines.Close span:after {
             transform: rotate(-45deg);
+          }
+          @media (max-width: 1224px) {
+            .Logo {
+              top: 68px;
+              left: auto;
+            }
+            .Lines {
+              top: 86px;
+              right: 48px;
+            }
+          }
+          @media (max-width: 768px) {
+            .Logo {
+              top: 68px;
+              left: auto;
+            }
           }
         `}</style>
       </div>

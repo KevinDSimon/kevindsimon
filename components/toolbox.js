@@ -5,7 +5,7 @@ export default () => {
 
   return (
     <div id="Toolbox" className="Section">
-      <div className="Section--label">Skills & Tools</div>
+      <div className="Section--label">Skills</div>
       <h1>My Toolbox</h1>
       <p>
         <Pill>UI/UX Design</Pill>

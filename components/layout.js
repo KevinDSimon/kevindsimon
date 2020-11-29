@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Head from 'next/head';
-import Nav from './nav';
 
 export default class extends React.Component {
   static async getInitialProps({ }) {
@@ -21,9 +20,6 @@ export default class extends React.Component {
         <div className="Wrapper">
           <div className="Container">
             {this.props.children}
-          </div>
-          <div className="Container Toggles">
-            <Nav />
           </div>
         </div>
         <style global jsx>{`
