@@ -15,7 +15,7 @@ export default () => (
     <Layout>
       <Nav />
       <Hero />
-      <Photos />
+      {/* <Photos /> */}
       <About />
       <Toolbox />
       <Work />
@@ -28,17 +28,20 @@ export default () => (
       }
       body  {
         // Merriweather Weight 300, 300i, 400, 400i, 700, 700i, 900, 900i
-        font-family: 'Merriweather', serif;
-        font-weight: 400;
+        // Merriweather Sans Weight 300, 300i, 400, 400i, 700, 700i, 800, 800i
+        // font-family: 'Merriweather', serif;
+        color: #131516;
+        font-family: 'Merriweather Sans', sans-serif;
+        font-weight: 300;
         font-size: 18px;
         line-height: 1.75;
-        color: #131516;
       }
       h1 {
         font-size: 64px;
         font-style: italic;
+        font-weight: 800;
         line-height: 1.2;
-        font-weight: 900;
+        text-transform: uppercase;
       }
       a {
         cursor: pointer;
@@ -51,11 +54,11 @@ export default () => (
         width: 100%;
       }
       strong {
-        font-weight: 700;
+        font-weight: 600;
       }
       i {
         font-style: italic;
-        font-weight: 700;
+        font-weight: 800;
       }
       .Wrapper {
         display: flex;
@@ -78,7 +81,7 @@ export default () => (
         margin: 20px 0 48px;
         font-style: italic;
         position: relative;
-        font-weight: 400;
+        font-weight: 600;
       }
       .Section--label:after {
         content: "";

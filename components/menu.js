@@ -86,6 +86,8 @@ export default ({ onSelect }) => {
           }
           a.NavLink {
             color: black;
+            font-style: italic;
+            text-transform: uppercase;
           }
           a.NavLink:hover {
             text-decoration: underline;
