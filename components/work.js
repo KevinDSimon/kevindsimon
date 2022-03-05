@@ -13,10 +13,20 @@ export default class extends React.Component {
         <div id="Work" className="Section">
           <div className="Section--label">Work</div>
           <div className="Work--piece">
+            <h1>Mobile App</h1>
+            <p><strong>Goal:</strong> Integrate the value of ActiveCampaign with the lives of our clients by providing key features while they are on the go, effectively allowing them to manage their business wherever they are.</p>
+            <p>A streamlined, intuitive interface lets users easily review important campaign and automation performance metrics whenever they want, and the built-in CRM lets them manage their entire sales team and pipeline from the field. The ActiveCampaign app keeps business owners connected to customers, not their computer.</p>
+            <Slider>
+              <img src="../static/Mobile App/Mobile App 1.png" />
+              <img src="../static/Mobile App/Mobile App 2.png" />
+            </Slider>
+          </div>
+          <div className="Work--piece">
             <h1>Bulk Edit</h1>
             <p><strong>Goal:</strong> Add efficiency to a customer's workflow by allowing them to group similar edits in a single action.</p>
             <p>Customers manage many line items and often are required to make similar changes to multiple objects at once. A selling points of Basis Platform is how quick it is to create and edit a media plan. Bulk edit allows edits across many objects, categories, and items making users less frustrated and more efficient day after day.</p>
             <Slider>
+              <img src="../static/Bulk Edit/Bulk Edit 4.png" />
               <img src="../static/Bulk Edit/Bulk Edit Flow.png" />
               <img src="../static/Bulk Edit/Bulk Edit 1.png" />
               <img src="../static/Bulk Edit/Bulk Edit 2.png" />
@@ -32,6 +42,7 @@ export default class extends React.Component {
             <p><strong>Goal:</strong> Add Global Search functionality to allow users the ability to quickly find the content that they want within Basis Platform.</p>
             <p>Basis Platform provides a solution that spans several roles and functions within adtech. One integral part of a platform that stores this much content is to allow users to comb through unstructured data via a dynamic Global search. This allows users to quickly find the content that they want, when they need it most.</p>
             <Slider>
+              <img src="../static/Global Search/Global Search 3.png" />
               <img src="../static/Global Search/Global Search Flow.png" />
               <img src="../static/Global Search/Global Search 1.png" />
               <img src="../static/Global Search/Global Search 2.png" />
@@ -45,6 +56,7 @@ export default class extends React.Component {
             <p><strong>Goal:</strong> Create a single pixel to be placed in the head of a publishers site and have a setup of the rules occur within Basis Platform. The single pixel can be used for capturing retargeting audience and tracking conversions.</p>
             <p>A series of processes must be followed to place audience or conversion pixels on a publisher's website. The entire process is re-visited if the pixel is not placed correctly, doesn't fire, or was placed on the wrong page. Adding and modifying pixel setup on publishers websites can take as long as a few days to a weeks. This can dramatically effect campaign creation and optimization.</p>
             <Slider>
+              <img src="../static/Universal Pixel/Universal Pixel 4.png" />
               <img src="../static/Universal Pixel/Universal Pixel Mind Map.png" />
               <img src="../static/Universal Pixel/Universal Pixel 1.png" />
               <img src="../static/Universal Pixel/Universal Pixel 2.png" />
@@ -53,7 +65,7 @@ export default class extends React.Component {
               <img src="../static/Universal Pixel/Universal Pixel 5.png" />
             </Slider>
           </div>
-          <div className="Work--piece">
+          {/* <div className="Work--piece">
             <h1>Centro Website</h1>
             <p><strong>Goal:</strong> Update Centro's corporate website by shifting focus to self serve technology products while also focusing on media services and adtech educational content.</p>
             <Slider>
@@ -70,7 +82,7 @@ export default class extends React.Component {
               <img src="../static/Centro Website/Centro Website 10.png" />
               <img src="../static/Centro Website/Centro Website 11.png" />
             </Slider>
-          </div>
+          </div> */}
         </div>
         <style jsx>{`
           .Work--piece {
