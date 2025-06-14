@@ -31,10 +31,10 @@ export default class extends React.Component {
             ignoreCancelEvents={false}
             onClick={this.handleLogoClick}
           >
-            <img src="../static/letter-mark.svg" />
+            <img src="../static/letter-mark2.svg" />
           </Link>
         </div>
-        <div
+        {/* <div
           className={"Lines " + (this.state.isClosed ? ' ' : 'Close')}
           onClick={this.handleClick}
         >
@@ -42,12 +42,12 @@ export default class extends React.Component {
         </div>
         {this.state.isClosed ? '' :
           <Menu onSelect={this.handleClick} />
-        }
+        } */}
         <style jsx>{`
           .Logo {
             position: relative;
             left: -100px;
-            top: 100px;
+            top: 125px;
             z-index: 50;
           }
           .Logo img {
@@ -58,7 +58,7 @@ export default class extends React.Component {
             cursor: pointer;
             position: fixed;
             right: 12.75%;
-            top: 118px;
+            top: 152px;
             height: 19px;
             width: 25px;
             z-index: 15;

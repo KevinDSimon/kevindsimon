@@ -13,7 +13,7 @@ export default () => (
 
   <div>
     <Layout>
-      <Nav />
+      {/* <Nav /> */}
       <Hero />
       {/* <Photos /> */}
       <About />
@@ -27,7 +27,6 @@ export default () => (
         box-sizing: border-box;
       }
       body  {
-        // Merriweather Weight 300, 300i, 400, 400i, 700, 700i, 900, 900i
         // Merriweather Sans Weight 300, 300i, 400, 400i, 700, 700i, 800, 800i
         // font-family: 'Merriweather', serif;
         color: #131516;
@@ -35,17 +34,18 @@ export default () => (
         font-weight: 300;
         font-size: 18px;
         line-height: 1.75;
+        /* background-color: #F0ECE3; */
       }
       h1 {
+        font-family: "Gloock", serif;
+        font-weight: 400;
+        font-style: normal;
         font-size: 64px;
-        font-style: italic;
-        font-weight: 800;
         line-height: 1.2;
-        text-transform: uppercase;
       }
       a {
         cursor: pointer;
-        color: #27AE60;
+        color: #6F7259;
       }
       a:hover {
         text-decoration: none;
@@ -64,18 +64,18 @@ export default () => (
         display: flex;
         flex-direction: column-reverse;
         -webkit-box-orient: vertical;
-        margin-bottom: 96px;
+        margin-bottom: 80px;
       }
       .Container {
         margin: 0 auto;
-        padding: 0 48px 0 150px;
-        max-width: 1224px;
+        /* padding: 0 48px 0 144px; */
+        max-width: 1024px;
       }
       .Section {
-        padding-top: 96px;
+        padding-top: 80px;
       }
       .Section--label {
-        color: #27AE60;
+        color: #6F7259;
         font-size: 16px;
         line-height: 24px;
         margin: 20px 0 48px;
@@ -88,17 +88,17 @@ export default () => (
         height: 2px;
         width: 8px;
         position: absolute;
-        bottom: -6px;
+        bottom: -4px;
         left: 0;
-        background: #27AE60;
+        background: #6F7259;
       }
       .Section p, .Section ul {
-        width: 35em;
+        width: 32em;
         margin-top: 1.5em;
         margin-bottom: 1.5em;
       }
       .Margin {
-        margin-top: 100px;
+        margin-top: 80px;
       }
       @media (max-width: 1224px) {
         .Container {
@@ -111,14 +111,20 @@ export default () => (
         .Section p, .Section ul {
           width: 100%;
         }
+        p {
+          font-size: 16px;
+        }  
       }
       @media (max-width: 375px) {
         .Container {
           padding: 0 24px;
         }
         h1 {
-          font-size: 44px;
+          font-size: 32px;
         }
+        p {
+          font-size: 14px;
+        } 
       }
     `}</style>
   </div>

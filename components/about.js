@@ -5,15 +5,18 @@ export default () => {
   return (
     <div id="About" className="Section">
       
-      <div className="Section--label">About</div>
+      {/* <div className="Section--label">About</div> */}
       
-      <h1>Hello</h1>
-      
-      <p>I'm Kevin Simon, a Detroit based Product Designer with 10+ years of experience. I care deeply about creating intuitive and beautiful products that help people accomplish their goals. I'm a team player with appreciation for every facet of iterative product development: strategy, research, concepting, prototyping, validation, high-fidelity design, development, and measurement.</p>
+      <p><strong>A Detroit-based Senior Product Designer with over a decade of experience turning complex problems into intuitive, beautiful digital experiences.</strong></p>
 
-      <p><a href="../static/kevin-simon-resume.pdf" title="Kevin Simon Resume" target="_blank">View my resumé</a></p>
+      <p>I’m passionate about crafting products that not only look great but genuinely help people achieve their goals. My approach is deeply collaborative and grounded in every stage of the product development lifecycle — from strategy and user research to prototyping, high-fidelity design, and performance measurement. I thrive in cross-functional teams and believe that great design happens through iteration, empathy, and close alignment with both user needs and business objectives.</p>
 
+      <p><a href="../static/kevin-simon-resume.pdf" title="Kevin Simon Resume" target="_blank">View My Resume</a></p>
+      <style jsx>{`
+      #About.Section {
+        padding-top: 0px;
+      }
+      `}</style>
     </div>
-
   )
 }

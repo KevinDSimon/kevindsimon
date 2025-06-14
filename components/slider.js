@@ -109,7 +109,7 @@ export default class extends React.Component {
         }
         .Carousel.Bottom .Nav-strip {
           top: auto;
-          bottom: 7px;
+          bottom: 8px;
         }
         .Carousel.Left .Nav-strip {
           right: auto;
@@ -136,11 +136,11 @@ export default class extends React.Component {
         }
         .Carousel.Top .Nav,
         .Carousel.Bottom .Nav {
-          padding: 8px 6px;
+          padding: 8px 4px;
         }
         .Carousel.Left .Nav,
         .Carousel.Right .Nav {
-          padding: 6px 12px;
+          padding: 8px 12px;
         }
         .Nav-strip .Nav-dot {
           background-color: lightgrey;

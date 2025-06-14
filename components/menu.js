@@ -84,10 +84,14 @@ export default ({ onSelect }) => {
           body {
             overflow-x: hidden;
           }
+          nav li {
+            margin-bottom: 8px
+          }
           a.NavLink {
+            font-family: "Gloock", serif;
+            font-weight: 400;
+            font-style: normal;
             color: black;
-            font-style: italic;
-            text-transform: uppercase;
           }
           a.NavLink:hover {
             text-decoration: underline;
@@ -95,7 +99,7 @@ export default ({ onSelect }) => {
         `}</style>
         <style jsx>{`
           .Overlay {
-            background: white;
+            background: #F0ECE3;
             position: fixed;
             top: 0;
             bottom: 0;
