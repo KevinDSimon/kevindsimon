@@ -3,7 +3,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "deploy": "next build && cp CNAME docs/CNAME && git add docs/CNAME && git add docs && git commit -m \"Deploy: Regenerate Site\" && git push origin master"
+    "deploy": "next build && cp CNAME docs/CNAME && cp .nojekyll docs/.nojekyll && cp robots.txt docs/robots.txt && git add docs/CNAME docs/.nojekyll docs/robots.txt && git add docs && git commit -m \"Deploy: Regenerate Site\" && git push origin master"
   },
   "dependencies": {
     "next": "^15.3.3",
