@@ -14,29 +14,30 @@ export default class extends React.Component {
           <div className="Section--label">Recent Work</div>
           <div className="Work--piece">
             <h1>Tock Manager</h1>
-            {/* <p><strong>Goal:</strong> Goal goes here</p> */}
-            <p>Coming Soon</p>
-            {/* <Slider>
-              <img src="../static/Mobile App/Mobile App 1.png" />
-              <img src="../static/Mobile App/Mobile App 2.png" />
-            </Slider> */}
+            <p><strong>Goal:</strong> Provide a simple, reliable tool that helps owners, operators, and teams stay prepared for every service—supporting delivery of exceptional hospitality.</p>
+            <p>Exceptional hospitality and personalized experiences don't happen by accident—they require thoughtful preparation. The Tock Manager app simplifies the process of reviewing guest details and planning ahead, helping teams execute each service with confidence so that staff can focus on what matters most: delivering hospitality that stands out.</p>
+            <Slider>
+              <img src="../static/Tock Manager/Tock Manager 1.png" />
+              <img src="../static/Tock Manager/Tock Manager 2.png" />
+            </Slider>
           </div>
           <div className="Work--piece">
             <h1>Tock Consumer</h1>
-            {/* <p><strong>Goal:</strong> Goal goes here</p> */}
-            <p>Coming Soon</p>
-            {/* <Slider>
-              <img src="../static/Mobile App/Mobile App 1.png" />
-              <img src="../static/Mobile App/Mobile App 2.png" />
-            </Slider> */}
+            <p><strong>Goal:</strong> Create a world-class native app that keeps guests coming back again and again, driving butts in seats for customers.</p>
+            <p>Guests are dining out more than ever, but the abundance of choice can be overwhelming. The Tock consumer app makes it easy to discover and book unforgettable experiences. At the same time, Tock helps restaurants, wineries, and hospitality businesses drive demand, fill seats, and grow their business. The consumer app connects curious diners with great businesses—and helps those businesses thrive.</p>
+            <Slider>
+              <img src="../static/Tock Consumer/Tock Consumer 1.png" />
+              <img src="../static/Tock Consumer/Tock Consumer 2.png" />
+            </Slider>
           </div>
           <div className="Work--piece">
-            <h1>ActiveCampaign</h1>
+            <h1 className='Break-word'>ActiveCampaign</h1>
             <p><strong>Goal:</strong> Integrate the value of ActiveCampaign with the lives of our clients by providing key features while they are on the go, effectively allowing them to manage their business wherever they are.</p>
             <p>A streamlined, intuitive interface lets users easily review important campaign and automation performance metrics whenever they want, and the built-in CRM lets them manage their entire sales team and pipeline from the field. The ActiveCampaign app keeps business owners connected to customers, not their computer.</p>
             <Slider>
               <img src="../static/Mobile App/Mobile App 1.png" />
               <img src="../static/Mobile App/Mobile App 2.png" />
+              <img src="../static/Mobile App/Mobile App 3.png" />
             </Slider>
           </div>
           <div className="Work--piece">
@@ -69,10 +70,10 @@ export default class extends React.Component {
               <img src="../static/Global Search/Global Search 5.png" />
             </Slider>
           </div>
-          {/* <div className="Work--piece">
-            <h1>Universal Pixel</h1>
+          {<div className="Work--piece">
+            <h1>Basis Universal Pixel</h1>
             <p><strong>Goal:</strong> Create a single pixel to be placed in the head of a publishers site and have a setup of the rules occur within Basis Platform. The single pixel can be used for capturing retargeting audience and tracking conversions.</p>
-            <p>A series of processes must be followed to place audience or conversion pixels on a publisher's website. The entire process is re-visited if the pixel is not placed correctly, doesn't fire, or was placed on the wrong page. Adding and modifying pixel setup on publishers websites can take as long as a few days to a weeks. This can dramatically effect campaign creation and optimization.</p>
+            <p>Adding audience or conversion pixels to a publisher’s website involves a series of steps—and if a pixel isn’t placed correctly, doesn’t fire, or ends up on the wrong page, it can seriously impact campaign measurement and the insights needed for optimization. Updating or modifying pixel setups can take anywhere from several days to over a week. By placing a single, persistent pixel across the site, teams can save time, avoid rework, and reduce headaches.</p>
             <Slider>
               <img src="../static/Universal Pixel/Universal Pixel 4.png" />
               <img src="../static/Universal Pixel/Universal Pixel Mind Map.png" />
@@ -82,7 +83,7 @@ export default class extends React.Component {
               <img src="../static/Universal Pixel/Universal Pixel 4.png" />
               <img src="../static/Universal Pixel/Universal Pixel 5.png" />
             </Slider>
-          </div> */}
+          </div>}
           {/* <div className="Work--piece">
             <h1>Centro Website</h1>
             <p><strong>Goal:</strong> Update Centro's corporate website by shifting focus to self serve technology products while also focusing on media services and adtech educational content.</p>
@@ -105,6 +106,9 @@ export default class extends React.Component {
         <style jsx>{`
           .Work--piece {
             margin-bottom: 80px;
+          }
+          .Break-word {
+            word-break: break-all;
           }
         `}</style>
       </div>

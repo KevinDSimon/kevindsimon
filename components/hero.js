@@ -1,5 +1,5 @@
 export default () => (
-  <header id="Home" className="Section Hero">
+  <header id="Home" className="Container Section Hero">
     <div><img src="../static/letter-mark2.svg" /></div>
     <div className="Section">
       <h1>Hey, I'm Kevin</h1>

@@ -4,18 +4,20 @@ import Pill from './pill';
 export default () => {
 
   return (
-    <div id="Toolbox" className="Section">
-      <div className="Section--label">Skills</div>
-      <h1>My Toolbox</h1>
+    <div id="Toolbox" className="Container Section">
+      <div className="Section--label">Toolbox</div>
+      <h1>Skills</h1>
       <p>
         <Pill>User-Centered Design</Pill>
+        <Pill>Design Systems</Pill>
         <Pill>UI/UX Design</Pill>
         <Pill>Responsive Design</Pill>
         <Pill>Native App Design</Pill>
         <Pill>Information Hierarchy</Pill>
-        <Pill>Rapid Prototyping</Pill>
         <Pill>Figma</Pill>
-        <Pill>Anlytics Collabration</Pill>
+        <Pill>Advanced Prototyping</Pill>
+        <Pill>Analytics Collabration</Pill>
+        <Pill>Agile Methodologies</Pill>
       </p>
     </div>
 

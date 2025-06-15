@@ -92,7 +92,7 @@ export default () => (
         left: 0;
         background: #6F7259;
       }
-      .Section p, .Section ul {
+      .Section p, .Section ul, .Experience {
         width: 32em;
         margin-top: 1.5em;
         margin-bottom: 1.5em;
@@ -108,14 +108,14 @@ export default () => (
         h1 {
           font-size: 64px;
         }
-        .Section p, .Section ul {
+        .Section p, .Section ul, .Experience {
           width: 100%;
         }
         p {
           font-size: 16px;
         }  
       }
-      @media (max-width: 375px) {
+      @media (max-width: 480px) {
         .Container {
           padding: 0 24px;
         }
