@@ -1,7 +1,7 @@
+// filepath: /Users/kevinsimon/Documents/kevindsimon/next.config.js
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  distDir: 'docs', // Export static files to the 'docs' directory
+  distDir: 'docs',
 };
-
 module.exports = nextConfig;
