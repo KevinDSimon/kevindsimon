@@ -4,9 +4,9 @@ import Pill from './pill';
 export default () => {
 
   return (
-    <div id="Toolbox" className="Container Section">
+    <div id="Toolbox" className="Section">
       <div className="Section--label">Toolbox</div>
-      <h1>Skills</h1>
+      <h2>Skills</h2>
       <p>
         <Pill>User-Centered Design</Pill>
         <Pill>Design Systems</Pill>

@@ -43,6 +43,13 @@ export default () => (
         font-size: 64px;
         line-height: 1.2;
       }
+      h2 {
+        font-family: "Gloock", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 48px;
+        line-height: 1.2;
+      }
       a {
         cursor: pointer;
         color: #6F7259;
@@ -72,7 +79,7 @@ export default () => (
         max-width: 1024px;
       }
       .Section {
-        padding-top: 80px;
+        padding-top: 56px;
       }
       .Section--label {
         color: #6F7259;
@@ -108,6 +115,9 @@ export default () => (
         h1 {
           font-size: 64px;
         }
+        h2 {
+          font-size: 36px;
+        }
         .Section p, .Section ul, .Experience {
           width: 100%;
         }
@@ -122,8 +132,11 @@ export default () => (
         h1 {
           font-size: 32px;
         }
+        h2 {
+          font-size: 24px;
+        }
         p {
-          font-size: 14px;
+          font-size: 16px;
         } 
       }
     `}</style>

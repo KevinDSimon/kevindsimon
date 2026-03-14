@@ -5,7 +5,7 @@ export default () => {
   return (
     <div id="Contact" className="Section">
       <div className="Section--label">Contact</div>
-      <h1>Let's Connect</h1>
+      <h2>Let's Connect</h2>
       <p>
         <a href="mailto:kevindsimon@gmail.com?Subject=Portfolio%20Contact" title="Email" target="_blank">Email</a> 
         <a href="https://www.linkedin.com/in/kevindsimon/" title="LinkedIn" target="_blank">LinkedIn</a>
