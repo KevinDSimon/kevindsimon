@@ -70,7 +70,7 @@ export default class extends React.Component {
             border-radius: 1px;
             height: 3px;
             width: 25px;
-            background: black;
+            background: var(--color-text-primary);
             position: absolute;
             top: 8px;
             display: block;

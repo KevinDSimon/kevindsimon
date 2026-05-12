@@ -19,7 +19,7 @@ export default () => {
         }
         a {
           display: block;
-          margin-bottom: 12px;
+          margin-bottom: var(--spacing-12);
         }
     `}</style>
     </div>

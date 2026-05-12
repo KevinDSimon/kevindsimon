@@ -127,7 +127,7 @@ export default class extends React.Component {
         }
         .react-swipeable-view-container > div {
           flex-basis: 100%;
-          background: #f7f7f7;
+          background: var(--color-bg-surface);
         }
         .Nav {
           text-align: center;

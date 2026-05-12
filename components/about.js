@@ -58,13 +58,13 @@ export default () => {
       .Line {
         flex-grow: 1;
         height: 1px;
-        border-bottom: 1px dashed #CCC;
-        margin: 0 12px;
+        border-bottom: 1px dashed var(--color-border-divider);
+        margin: 0 var(--spacing-12);
       }
       .Date {
         white-space: nowrap;
-        font-size: 14px;
-        color: #777;
+        font-size: var(--font-size-small);
+        color: var(--color-text-secondary);
       }
       `}</style>
     </div>

@@ -9,19 +9,9 @@ export default () => (
         height: 54px;
         width: 54px;
       }
-      @media (max-width: 1224px) and (min-width: 390px) {
-        h1 {
-          font-size: 64px;
-        }
-      }
       @media (max-width: 1224px) {
         .Hero {
-          padding-top: 80px;
-        }
-      }
-      @media (max-width: 375px) {
-        h1 {
-          font-size: 32px;
+          padding-top: var(--spacing-80);
         }
       }
     `}</style>
