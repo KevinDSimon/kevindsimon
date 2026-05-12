@@ -105,7 +105,7 @@ export default class extends React.Component {
         </div>
         <style jsx>{`
           .Work--piece {
-            margin-bottom: 80px;
+            margin-bottom: var(--spacing-80);
           }
           .Break-word {
             word-break: break-all;

@@ -17,11 +17,11 @@ export default class extends React.Component {
             margin: 0 .5em .5em 0;
             text-align: center;
             vertical-align: middle;
-            background-color: #EDE6D6;
+            background-color: var(--color-bg-pill);
             white-space: nowrap;
-            padding: 8px 16px 6px;
-            font-size: .75em;
-            border-radius: 24px;
+            padding: var(--spacing-8) var(--spacing-16) 6px;
+            font-size: var(--font-size-small);
+            border-radius: var(--radius-pill);
           }
         `}</style>
       </span>

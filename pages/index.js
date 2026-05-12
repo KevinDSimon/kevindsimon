@@ -26,33 +26,31 @@ export default () => (
       * {
         box-sizing: border-box;
       }
-      body  {
-        // Merriweather Sans Weight 300, 300i, 400, 400i, 700, 700i, 800, 800i
-        // font-family: 'Merriweather', serif;
-        color: #131516;
-        font-family: 'Merriweather Sans', sans-serif;
+      body {
+        color: var(--color-text-primary);
+        background-color: var(--color-bg-page);
+        font-family: var(--font-sans);
         font-weight: 300;
-        font-size: 18px;
-        line-height: 1.75;
-        /* background-color: #F0ECE3; */
+        font-size: var(--font-size-body);
+        line-height: var(--line-height-body);
       }
       h1 {
-        font-family: "Gloock", serif;
+        font-family: var(--font-serif);
         font-weight: 400;
         font-style: normal;
-        font-size: 64px;
-        line-height: 1.2;
+        font-size: var(--font-size-h1);
+        line-height: var(--line-height-heading);
       }
       h2 {
-        font-family: "Gloock", serif;
+        font-family: var(--font-serif);
         font-weight: 400;
         font-style: normal;
-        font-size: 48px;
-        line-height: 1.2;
+        font-size: var(--font-size-h2);
+        line-height: var(--line-height-heading);
       }
       a {
         cursor: pointer;
-        color: #6F7259;
+        color: var(--color-text-link);
       }
       a:hover {
         text-decoration: none;
@@ -71,21 +69,20 @@ export default () => (
         display: flex;
         flex-direction: column-reverse;
         -webkit-box-orient: vertical;
-        margin-bottom: 80px;
+        margin-bottom: var(--spacing-80);
       }
       .Container {
         margin: 0 auto;
-        /* padding: 0 48px 0 144px; */
         max-width: 1024px;
       }
       .Section {
-        padding-top: 56px;
+        padding-top: var(--spacing-56);
       }
       .Section--label {
-        color: #6F7259;
-        font-size: 16px;
-        line-height: 24px;
-        margin: 20px 0 48px;
+        color: var(--color-text-accent);
+        font-size: var(--font-size-label);
+        line-height: var(--line-height-label);
+        margin: 20px 0 var(--spacing-48);
         font-style: italic;
         position: relative;
         font-weight: 600;
@@ -97,7 +94,7 @@ export default () => (
         position: absolute;
         bottom: -4px;
         left: 0;
-        background: #6F7259;
+        background: var(--color-icon-accent);
       }
       .Section p, .Section ul, .Experience {
         width: 32em;
@@ -105,39 +102,21 @@ export default () => (
         margin-bottom: 1.5em;
       }
       .Margin {
-        margin-top: 80px;
+        margin-top: var(--spacing-80);
       }
       @media (max-width: 1224px) {
         .Container {
-          padding: 0 48px;
+          padding: 0 var(--spacing-48);
           width: 100%;
-        }
-        h1 {
-          font-size: 64px;
-        }
-        h2 {
-          font-size: 36px;
         }
         .Section p, .Section ul, .Experience {
           width: 100%;
         }
-        p {
-          font-size: 16px;
-        }  
       }
       @media (max-width: 480px) {
         .Container {
-          padding: 0 24px;
+          padding: 0 var(--spacing-24);
         }
-        h1 {
-          font-size: 32px;
-        }
-        h2 {
-          font-size: 24px;
-        }
-        p {
-          font-size: 16px;
-        } 
       }
     `}</style>
   </div>

@@ -88,10 +88,10 @@ export default ({ onSelect }) => {
             margin-bottom: 8px
           }
           a.NavLink {
-            font-family: "Gloock", serif;
+            font-family: var(--font-serif);
             font-weight: 400;
             font-style: normal;
-            color: black;
+            color: var(--color-text-primary);
           }
           a.NavLink:hover {
             text-decoration: underline;
@@ -99,7 +99,7 @@ export default ({ onSelect }) => {
         `}</style>
         <style jsx>{`
           .Overlay {
-            background: #F0ECE3;
+            background: var(--color-bg-surface);
             position: fixed;
             top: 0;
             bottom: 0;
@@ -108,7 +108,7 @@ export default ({ onSelect }) => {
             z-index: 3;
           }
           .Overlay nav {
-            font-size: 64px;
+            font-size: var(--font-size-h1);
             line-height: 1.25;
             font-weight: 900;
             padding-top: 96px;

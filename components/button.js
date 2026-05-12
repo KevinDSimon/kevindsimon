@@ -15,26 +15,26 @@ export default class extends React.Component {
           {this.props.children}
           <style jsx>{`
             .Button {
-              color: black;
+              color: var(--color-text-primary);
               display: inline-block;
               margin-bottom: 0;
               text-align: center;
               vertical-align: middle;
               cursor: pointer;
               background-image: none;
-              border: 2px solid black;
+              border: 2px solid var(--color-text-primary);
               white-space: nowrap;
-              padding: 8px 20px 5px;
-              font-size: .75em;
-              border-radius: 4px;
+              padding: var(--spacing-8) 20px 5px;
+              font-size: var(--font-size-small);
+              border-radius: var(--radius-sm);
               text-transform: uppercase;
               font-weight: 700;
               letter-spacing: .075em;
               text-decoration: none;
             }
             .Button:hover {
-              background-color: black;
-              color: white;
+              background-color: var(--color-text-primary);
+              color: var(--color-bg-page);
             }
           `}</style>
       </a>
