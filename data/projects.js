@@ -47,7 +47,7 @@ export const projects = [
     org: 'Oracle',
     goal: 'Give researchers and public health authorities around the world one standardized cloud platform for analyzing and comparing COVID-19 genomic data, so they can spot emerging variants sooner.',
     value: 'Researchers lacked the infrastructure to process sequences quickly and share results securely across borders. Built with the University of Oxford, the platform gave them one standardized place to analyze their data, and labs could choose to share results with others.',
-    role: "I was a UX designer on Oracle's design team, working with Oxford University's product manager, research scientists, and public health officials. I improved the design to make the data easier to understand through clearer organization and visualizations.",
+    role: "I was a Sr. UX Designer on Oracle's design team, working with Oxford University's product manager, research scientists, and public health officials. I improved the design to make the data easier to understand through clearer organization and visualizations.",
     impact: [
       { label: 'Time for labs to receive processed sequences', value: '96% faster' },
       { label: 'Genomic sequences processed', value: '500,000+' },
