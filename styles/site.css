@@ -1,0 +1,389 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: var(--color-bg-page);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+}
+h1, h2, p {
+  margin: 0;
+  font-size: inherit;
+  line-height: inherit;
+}
+a {
+  color: inherit;
+  text-decoration-color: var(--color-border-link);
+  text-underline-offset: 3px;
+}
+a:hover {
+  color: var(--color-text-accent);
+  text-decoration-color: currentColor;
+}
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--color-text-accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+.Muted {
+  color: var(--color-text-secondary);
+}
+
+/* ── Page ── */
+.Page {
+  position: relative;
+  min-height: 100vh;
+  overflow-x: clip;
+}
+.Column {
+  max-width: calc(var(--column-width) + var(--gutter) * 2);
+  margin: 0 auto;
+  padding: clamp(96px, 16vh, 160px) var(--gutter) 0;
+}
+.ThemeToggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 6;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  background: transparent;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+}
+.Fade {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  height: 80px;
+  pointer-events: none;
+}
+.Fade--top {
+  top: 0;
+  background: linear-gradient(var(--color-bg-page), transparent);
+}
+.Fade--bottom {
+  bottom: 0;
+  background: linear-gradient(transparent, var(--color-bg-page));
+}
+
+/* ── Links ── */
+.Link, .Row {
+  text-decoration: none;
+}
+a.Link:hover, a.Row:hover {
+  color: inherit;
+}
+.Link {
+  padding: 10px 0;
+}
+.LinkLabel {
+  position: relative;
+  display: inline-block;
+}
+.LinkLabel::before, .LinkLabel::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  pointer-events: none;
+}
+.LinkLabel::before {
+  background: var(--color-border-soft);
+}
+.LinkLabel::after {
+  background: var(--color-text-primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .38s var(--ease-out);
+}
+.Link:hover .LinkLabel::after, .Link:focus-visible .LinkLabel::after,
+.Row:hover .LinkLabel::after, .Row:focus-visible .LinkLabel::after {
+  transform: scaleX(1);
+}
+
+/* ── Home ── */
+.Intro {
+  padding-top: 40px;
+}
+.Intro p + p {
+  margin-top: 16px;
+}
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+.Header h1 {
+  font-weight: 600;
+}
+.Header img {
+  display: block;
+  flex: 0 0 auto;
+  width: 44px;
+  height: 44px;
+}
+.Links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding-top: 24px;
+}
+.Group {
+  margin-top: 32px;
+  padding-top: 12px;
+  border-top: 1px solid var(--color-border-soft);
+}
+.Group--first {
+  margin-top: 48px;
+}
+.Group h2 {
+  margin-bottom: 16px;
+  font-weight: 300;
+  color: var(--color-text-secondary);
+}
+.Row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 24px;
+  min-height: 28px;
+}
+.RowTitle {
+  position: relative;
+  white-space: nowrap;
+}
+.RowArrow {
+  position: absolute;
+  left: calc(100% + 6px);
+  top: 6px;
+  opacity: 0;
+  transform: translate(-3px, 3px);
+  transition: opacity .24s, transform .42s var(--ease-out);
+}
+.Row:hover .RowArrow, .Row:focus-visible .RowArrow {
+  opacity: .8;
+  transform: none;
+}
+.RowMeta {
+  white-space: nowrap;
+  color: var(--color-text-secondary);
+}
+.Row--off {
+  color: var(--color-text-secondary);
+}
+.Row--off .LinkLabel::after {
+  display: none;
+}
+
+/* ── Images ── */
+.Images {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.Images--home {
+  padding-top: 72px;
+}
+.Images--project {
+  padding-top: 48px;
+}
+.Frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 565 / 307;
+  overflow: hidden;
+  border-radius: var(--radius-image);
+  background: var(--color-bg-surface);
+  color: var(--color-text-secondary);
+}
+.Frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ── Project ── */
+.Breadcrumb {
+  padding-bottom: 40px;
+  color: var(--color-text-secondary);
+}
+.Breadcrumb a {
+  padding: 10px 0;
+}
+.Project {
+  padding-bottom: 96px;
+}
+.Project h1 {
+  font-weight: 600;
+}
+.ProjectTag {
+  margin-bottom: 24px;
+  color: var(--color-text-secondary);
+}
+.Label {
+  display: flex;
+  align-items: center;
+  min-height: 32px;
+  margin-top: 16px;
+  color: var(--color-text-secondary);
+}
+.ProjectTag + .Label {
+  margin-top: 0;
+}
+.Metric {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  min-height: 32px;
+}
+.Next {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding-top: 72px;
+}
+
+/* ── Collage ── */
+.Collage {
+  position: relative;
+  max-width: 740px;
+  aspect-ratio: 960 / 560;
+  margin: 176px auto 120px;
+}
+.Bit {
+  position: absolute;
+  display: block;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+  transition: transform .28s var(--ease-out);
+  filter: drop-shadow(0 2px 6px var(--color-shadow));
+}
+.Bit:hover {
+  transform: rotate(3deg);
+}
+.Bit:nth-child(2n):hover {
+  transform: rotate(-3.5deg);
+}
+.Bit:nth-child(3n):hover {
+  transform: rotate(4deg);
+}
+.Bit.is-dragging {
+  cursor: grabbing;
+  transform: scale(1.015);
+  filter: drop-shadow(0 10px 20px var(--color-shadow));
+}
+.Bit img {
+  display: block;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+.Bit--print img {
+  padding: 6px;
+  background: #FFFFFF;
+}
+.Quote {
+  display: block;
+  min-width: 220px;
+  padding: 14px;
+  border: 1px solid var(--color-border-soft);
+  border-radius: var(--radius-image);
+  background: var(--color-bg-paper);
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+}
+.QuoteHead {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.Bit img.QuoteAvatar {
+  flex: 0 0 auto;
+  width: 40px;
+  height: 40px;
+  border-radius: 9999px;
+}
+.QuoteWho {
+  display: block;
+  flex: 1 1 auto;
+  min-width: 0;
+  line-height: 16px;
+}
+.QuoteName {
+  display: block;
+  font-weight: 600;
+}
+.QuoteRole {
+  display: block;
+  color: var(--color-text-secondary);
+  font-size: 12px;
+}
+.QuoteIn {
+  flex: 0 0 auto;
+  align-self: flex-start;
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  background: #0A66C2;
+  color: #FFFFFF;
+  font-size: 11px;
+  line-height: 15px;
+  font-weight: 600;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .Row {
+    gap: 12px;
+  }
+  .RowTitle {
+    white-space: normal;
+  }
+  /* Quote cards don't shrink with the collage, so they stack below it on phones. */
+  .Collage {
+    margin-bottom: 370px;
+  }
+  .Bit--q2 {
+    translate: -20px 128px;
+  }
+  .Bit--q3 {
+    translate: -210px 250px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .Bit, .LinkLabel::after, .RowArrow {
+    transition: none;
+  }
+  .Bit:hover {
+    transform: none;
+  }
+}

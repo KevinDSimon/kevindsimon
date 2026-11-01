@@ -1,124 +1,82 @@
-import Layout from '../components/layout';
 import Head from 'next/head';
-import Nav from '../components/nav';
-import Hero from '../components/hero';
-import Photos from '../components/photos';
-import About from '../components/about';
-import Toolbox from '../components/toolbox';
-import Work from '../components/work';
-import Contact from '../components/contact';
-import Status from '../components/status';
+import Link from 'next/link';
+import Collage from '../components/collage';
+import ThemeToggle from '../components/theme-toggle';
+import { projects } from '../data/projects';
 
-export default () => (
+const playground = ['Dialed Grounds', 'Loaded Lie'];
+const featured = [
+  { slug: 'tock-manager', label: 'Tock Manager case study' },
+  { slug: 'tock-consumer', label: 'Tock Consumer case study' },
+  { slug: 'activecampaign-mobile', label: 'ActiveCampaign Mobile case study' },
+];
 
-  <div>
-    <Layout>
-      {/* <Nav /> */}
-      <Hero />
-      {/* <Photos /> */}
-      <About />
-      <Toolbox />
-      <Work />
-      <Contact />
-      {/* <Status /> */}
-    </Layout>
-    <style global jsx>{`
-      * {
-        box-sizing: border-box;
-      }
-      body {
-        color: var(--color-text-primary);
-        background-color: var(--color-bg-page);
-        font-family: var(--font-sans);
-        font-weight: 300;
-        font-size: var(--font-size-body);
-        line-height: var(--line-height-body);
-      }
-      h1 {
-        font-family: var(--font-serif);
-        font-weight: 400;
-        font-style: normal;
-        font-size: var(--font-size-h1);
-        line-height: var(--line-height-heading);
-      }
-      h2 {
-        font-family: var(--font-serif);
-        font-weight: 400;
-        font-style: normal;
-        font-size: var(--font-size-h2);
-        line-height: var(--line-height-heading);
-      }
-      a {
-        cursor: pointer;
-        color: var(--color-text-link);
-      }
-      a:hover {
-        text-decoration: none;
-      }
-      img {
-        width: 100%;
-      }
-      strong {
-        font-weight: 600;
-      }
-      i {
-        font-style: italic;
-        font-weight: 800;
-      }
-      .Wrapper {
-        display: flex;
-        flex-direction: column-reverse;
-        -webkit-box-orient: vertical;
-        margin-bottom: var(--spacing-80);
-      }
-      .Container {
-        margin: 0 auto;
-        max-width: 1024px;
-      }
-      .Section {
-        padding-top: var(--spacing-56);
-      }
-      .Section--label {
-        color: var(--color-text-accent);
-        font-size: var(--font-size-label);
-        line-height: var(--line-height-label);
-        margin: 20px 0 var(--spacing-48);
-        font-style: italic;
-        position: relative;
-        font-weight: 600;
-      }
-      .Section--label:after {
-        content: "";
-        height: 2px;
-        width: 8px;
-        position: absolute;
-        bottom: -4px;
-        left: 0;
-        background: var(--color-icon-accent);
-      }
-      .Section p, .Section ul, .Experience {
-        width: 32em;
-        margin-top: 1.5em;
-        margin-bottom: 1.5em;
-      }
-      .Margin {
-        margin-top: var(--spacing-80);
-      }
-      @media (max-width: 1224px) {
-        .Container {
-          padding: 0 var(--spacing-48);
-          width: 100%;
-        }
-        .Section p, .Section ul, .Experience {
-          width: 100%;
-        }
-      }
-      @media (max-width: 480px) {
-        .Container {
-          padding: 0 var(--spacing-24);
-        }
-      }
-    `}</style>
-  </div>
+export default function Home() {
+  return (
+    <div className="Page">
+      <Head>
+        <title>Kevin Simon</title>
+      </Head>
+      <ThemeToggle />
 
-)
+      <div className="Column">
+        <header className="Header">
+          <div>
+            <h1>Kevin Simon</h1>
+            <p className="Muted">Product designer in Detroit</p>
+          </div>
+          <img src="/images/letter-mark.svg" alt="Kevin Simon letter mark" />
+        </header>
+
+        <div className="Intro">
+          <p>I turn complex problems into intuitive, beautiful products. Over a decade in, currently at Tock × American Express.</p>
+          <p>I start with the people using it, stay close to the people building it, and measure what ships. Lately I've been using AI to build what I design, so more of it ends up in people's hands.</p>
+        </div>
+
+        <nav className="Links" aria-label="Primary">
+          <a className="Link" href="mailto:kevindsimon@gmail.com"><span className="LinkLabel">Email</span></a>
+          <a className="Link" href="https://www.linkedin.com/in/kevindsimon/"><span className="LinkLabel">LinkedIn</span></a>
+          <a className="Link" href="/static/kevin-simon-resume.pdf"><span className="LinkLabel">Resume</span></a>
+        </nav>
+
+        <section className="Group Group--first">
+          <h2>Projects</h2>
+          {projects.map((p) => (
+            <Link className="Row" href={`/${p.slug}`} key={p.slug}>
+              <span className="RowTitle">
+                <span className="LinkLabel">{p.title}</span>
+                <svg className="RowArrow" width="11" height="11" viewBox="0 0 11 11" fill="none" stroke="currentColor" strokeWidth="1.2" aria-hidden="true">
+                  <path d="M1.5 9.5l8-8M3 1.5h6.5V8" />
+                </svg>
+              </span>
+              <span className="RowMeta">{p.org}</span>
+            </Link>
+          ))}
+        </section>
+
+        <section className="Group">
+          <h2>Playground</h2>
+          {playground.map((title) => (
+            <div className="Row Row--off" key={title}>
+              <span className="RowTitle"><span className="LinkLabel">{title}</span></span>
+              <span className="RowMeta">soon</span>
+            </div>
+          ))}
+        </section>
+
+        <main className="Images Images--home">
+          {featured.map(({ slug, label }) => (
+            <Link className="Frame" href={`/${slug}`} aria-label={label} key={slug}>
+              <img src={projects.find((p) => p.slug === slug).images[0].src} alt="" />
+            </Link>
+          ))}
+        </main>
+      </div>
+
+      <Collage />
+
+      <div className="Fade Fade--top" aria-hidden="true" />
+      <div className="Fade Fade--bottom" aria-hidden="true" />
+    </div>
+  );
+}
