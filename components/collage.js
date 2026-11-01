@@ -18,9 +18,8 @@ const startingPieces = [
   { id: 'ball', label: 'TaylorMade TP5x golf ball', src: img('ball.png'), x: 66, y: 32, w: 8, r: 12, z: 7 },
   { id: 'claude', label: 'Claude app icon', src: img('claude.png'), x: 31, y: 18, w: 8, r: -10, z: 7 },
   { id: 'figma', label: 'Figma app icon', src: img('figma.png'), x: 81, y: 6, w: 8, r: 11, z: 7 },
-  { id: 'q1', label: 'Quote from Adrienne Lowe', quote: '“Kevin cares deeply for our customers and it shows.”', name: 'Adrienne Lowe', role: 'CTO, Public Service Alliance', avatar: img('adrienne.jpg'), x: 3, y: 68, w: 28, r: -3, z: 8 },
-  { id: 'q2', label: 'Quote from Tony Goshko', quote: '“He handles everything you throw at him with a smile (smirk, really).”', name: 'Tony Goshko', role: 'Former manager', avatar: img('tony.jpg'), x: 35, y: 60, w: 28, r: 2, z: 9 },
-  { id: 'q3', label: 'Quote from Joy Zagar', quote: '“He takes feedback in stride and with an open mind.”', name: 'Joy Zagar', role: 'Design partner at Tock', avatar: img('joy.jpg'), x: 69, y: 72, w: 28, r: -2, z: 8 },
+  { id: 'q1', label: 'Quote from Adrienne Lowe', quote: '“Kevin cares deeply for our customers and it shows.”', name: 'Adrienne Lowe', role: 'CTO, Public Service Alliance', avatar: img('adrienne.jpg'), x: 1, y: 66, w: 28, r: -3, z: 8 },
+  { id: 'q2', label: 'Quote from Tony Goshko', quote: '“He handles everything you throw at him with a smile (smirk, really).”', name: 'Tony Goshko', role: 'Former manager', avatar: img('tony.jpg'), x: 69, y: 66, w: 28, r: 2, z: 9 },
 ];
 
 const arrowSteps = { ArrowLeft: [-2, 0], ArrowRight: [2, 0], ArrowUp: [0, -2], ArrowDown: [0, 2] };

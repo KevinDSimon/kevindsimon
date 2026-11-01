@@ -263,7 +263,10 @@ a.Link:hover, a.Row:hover {
 /* ── Collage ── */
 .Collage {
   position: relative;
-  max-width: 740px;
+  /* Rotated pieces overhang the stage slightly, so inset it past the gutter. */
+  width: calc(100% - var(--gutter) * 2 - 24px);
+  max-width: 660px;
+  container-type: inline-size;
   aspect-ratio: 960 / 560;
   margin: 176px auto 120px;
 }
@@ -309,10 +312,14 @@ a.Link:hover, a.Row:hover {
   padding: 6px;
   background: #FFFFFF;
 }
+/* Keeps the right-hand card on the page when the collage narrows. */
+.Bit--q2 {
+  translate: min(0px, calc(30cqw - 194px)) 0;
+}
 .Quote {
   display: block;
-  min-width: 220px;
-  padding: 14px;
+  min-width: 190px;
+  padding: 12px;
   border: 1px solid var(--color-border-soft);
   border-radius: var(--radius-image);
   background: var(--color-bg-paper);
@@ -327,8 +334,8 @@ a.Link:hover, a.Row:hover {
 }
 .Bit img.QuoteAvatar {
   flex: 0 0 auto;
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   border-radius: 9999px;
 }
 .QuoteWho {
@@ -369,13 +376,10 @@ a.Link:hover, a.Row:hover {
   }
   /* Quote cards don't shrink with the collage, so they stack below it on phones. */
   .Collage {
-    margin-bottom: 370px;
+    margin-bottom: 240px;
   }
   .Bit--q2 {
-    translate: -20px 128px;
-  }
-  .Bit--q3 {
-    translate: -210px 250px;
+    translate: min(0px, calc(30cqw - 194px)) 140px;
   }
 }
 
