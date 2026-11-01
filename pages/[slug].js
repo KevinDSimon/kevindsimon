@@ -34,7 +34,7 @@ export default function Project({ project, next }) {
         </nav>
 
         <h1>{project.title}</h1>
-        <p className="ProjectTag">{project.tag}</p>
+        <p className="ProjectTag">{project.org}</p>
 
         <div className="Label">Goal</div>
         <p>{project.goal}</p>
@@ -46,19 +46,21 @@ export default function Project({ project, next }) {
         {project.impact.length > 0 && (
           <>
             <div className="Label">Impact</div>
-            {project.impact.map((m) => (
-              <div className="Metric" key={m.label}>
-                <span>{m.label}</span>
-                <span>{m.value}</span>
-              </div>
-            ))}
+            <div className="Metrics">
+              {project.impact.map((m) => (
+                <div key={m.label}>
+                  <div>{m.value}</div>
+                  <div className="Muted">{m.label}</div>
+                </div>
+              ))}
+            </div>
           </>
         )}
 
         <div className="Images Images--project">
           {project.images.map((image, i) => (
             <div className="Frame" key={i}>
-              {image.src ? <img src={image.src} alt={image.alt} loading="lazy" /> : <span>[Screenshot]</span>}
+              {image.src ? <img src={image.src} alt={image.alt} loading="lazy" /> : <span>Coming soon</span>}
             </div>
           ))}
         </div>

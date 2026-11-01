@@ -11,7 +11,7 @@ const startingPieces = [
   { id: 'jersey', label: 'Chicago Cubs jersey', src: img('jersey.png'), x: 58, y: -4, w: 30, r: 6, z: 1 },
   { id: 'leica', label: 'Leica M11 camera', src: img('leica.png'), x: 8, y: 2, w: 31, r: -7, z: 2 },
   { id: 'boot', label: 'Danner hiking boot', src: img('boot.png'), x: 13, y: 27, w: 29, r: 5, z: 3 },
-  { id: 'winnie', label: "Winnie, Kevin's curly brown dog", src: img('winnie.png'), x: 35, y: 0, w: 26, r: -2, z: 4 },
+  { id: 'winnie', label: "Winnie, Kevin's curly brown dog", src: img('winnie.png'), x: 37, y: 0, w: 22, r: -2, z: 4 },
   { id: 'fish', label: 'Bag of Swedish Fish', src: img('fish.png'), x: 26, y: 48, w: 15, r: -9, z: 5 },
   { id: 'bagel', label: 'Everything bagel', src: img('bagel.png'), x: 70, y: 38, w: 21, r: -6, z: 5 },
   { id: 'mug', label: 'Coffee mug', src: img('mug.png'), x: 54, y: 42, w: 17, r: 5, z: 6 },

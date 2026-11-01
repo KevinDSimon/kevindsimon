@@ -8,7 +8,7 @@ const playground = ['Dialed Grounds', 'Loaded Lie'];
 const featured = [
   { slug: 'tock-manager', label: 'Tock Manager case study' },
   { slug: 'tock-consumer', label: 'Tock Consumer case study' },
-  { slug: 'activecampaign-mobile', label: 'ActiveCampaign Mobile case study' },
+  { slug: 'basis-global-search', label: 'Global Search case study', image: 1 },
 ];
 
 export default function Home() {
@@ -23,14 +23,14 @@ export default function Home() {
         <header className="Header">
           <div>
             <h1>Kevin Simon</h1>
-            <p className="Muted">Product designer in Detroit</p>
+            <p className="Muted">Product Designer</p>
           </div>
           <img src="/images/letter-mark.svg" alt="Kevin Simon letter mark" />
         </header>
 
         <div className="Intro">
-          <p>I turn complex problems into intuitive, beautiful products. Over a decade in, currently at Tock × American Express.</p>
-          <p>I start with the people using it, stay close to the people building it, and measure what ships. Lately I've been using AI to build what I design, so more of it ends up in people's hands.</p>
+          <p>I turn complex problems into intuitive, beautiful products. Over a decade in, I currently work at American Express.</p>
+          <p>My work starts with getting close to the people I'm designing for, exploring widely, and validating ideas early, so teams can build with confidence. Lately I've been using AI to get there sooner, turning early concepts into working products.</p>
         </div>
 
         <nav className="Links" aria-label="Primary">
@@ -59,15 +59,15 @@ export default function Home() {
           {playground.map((title) => (
             <div className="Row Row--off" key={title}>
               <span className="RowTitle"><span className="LinkLabel">{title}</span></span>
-              <span className="RowMeta">soon</span>
+              <span className="RowMeta">Coming soon</span>
             </div>
           ))}
         </section>
 
         <main className="Images Images--home">
-          {featured.map(({ slug, label }) => (
+          {featured.map(({ slug, label, image = 0 }) => (
             <Link className="Frame" href={`/${slug}`} aria-label={label} key={slug}>
-              <img src={projects.find((p) => p.slug === slug).images[0].src} alt="" />
+              <img src={projects.find((p) => p.slug === slug).images[image].src} alt="" />
             </Link>
           ))}
         </main>

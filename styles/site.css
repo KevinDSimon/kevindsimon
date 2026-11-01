@@ -246,12 +246,11 @@ a.Link:hover, a.Row:hover {
 .ProjectTag + .Label {
   margin-top: 0;
 }
-.Metric {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.Metrics {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
   gap: 24px;
-  min-height: 32px;
 }
 .Next {
   display: flex;
@@ -373,6 +372,10 @@ a.Link:hover, a.Row:hover {
   }
   .RowTitle {
     white-space: normal;
+  }
+  .Metrics {
+    grid-auto-flow: row;
+    gap: 12px;
   }
   /* Quote cards don't shrink with the collage, so they stack below it on phones. */
   .Collage {
