@@ -1,10 +1,17 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import Collage from '../components/collage';
+import Contributions from '../components/contributions';
+import ExternalArrow from '../components/external-arrow';
 import ThemeToggle from '../components/theme-toggle';
 import { projects } from '../data/projects';
 
-const playground = ['Dialed Grounds', 'Loaded Lie'];
+const playground = [
+  { title: 'Dialed Grounds', href: 'https://apps.apple.com/us/app/dialed-grounds/id6760966486', meta: 'App Store' },
+  { title: 'Loaded Lie' },
+  { title: 'Milk Run' },
+  { title: 'Proof' },
+];
 const featured = [
   { slug: 'tock-manager', label: 'Tock Manager case study' },
   { slug: 'tock-consumer', label: 'Tock Consumer case study' },
@@ -35,7 +42,8 @@ export default function Home() {
 
         <nav className="Links" aria-label="Primary">
           <a className="Link" href="mailto:kevindsimon@gmail.com"><span className="LinkLabel">Email</span></a>
-          <a className="Link" href="https://www.linkedin.com/in/kevindsimon/"><span className="LinkLabel">LinkedIn</span></a>
+          <a className="Link" href="https://www.linkedin.com/in/kevindsimon/"><span className="LinkLabel">LinkedIn<ExternalArrow /></span></a>
+          <a className="Link" href="https://github.com/KevinDSimon"><span className="LinkLabel">GitHub<ExternalArrow /></span></a>
           <a className="Link" href="/static/kevin-simon-resume.pdf"><span className="LinkLabel">Resume</span></a>
         </nav>
 
@@ -43,24 +51,9 @@ export default function Home() {
           <h2>Projects</h2>
           {projects.map((p) => (
             <Link className="Row" href={`/${p.slug}`} key={p.slug}>
-              <span className="RowTitle">
-                <span className="LinkLabel">{p.title}</span>
-                <svg className="RowArrow" width="11" height="11" viewBox="0 0 11 11" fill="none" stroke="currentColor" strokeWidth="1.2" aria-hidden="true">
-                  <path d="M1.5 9.5l8-8M3 1.5h6.5V8" />
-                </svg>
-              </span>
+              <span className="RowTitle"><span className="LinkLabel">{p.title}</span></span>
               <span className="RowMeta">{p.org}</span>
             </Link>
-          ))}
-        </section>
-
-        <section className="Group">
-          <h2>Playground</h2>
-          {playground.map((title) => (
-            <div className="Row Row--off" key={title}>
-              <span className="RowTitle"><span className="LinkLabel">{title}</span></span>
-              <span className="RowMeta">Coming soon</span>
-            </div>
           ))}
         </section>
 
@@ -71,6 +64,27 @@ export default function Home() {
             </Link>
           ))}
         </main>
+
+        <section className="Group">
+          <h2>Playground</h2>
+          {playground.map(({ title, href, meta }) =>
+            href ? (
+              <a className="Row" href={href} key={title}>
+                <span className="RowTitle">
+                  <span className="LinkLabel">{title}</span>
+                  <ExternalArrow />
+                </span>
+                <span className="RowMeta">{meta}</span>
+              </a>
+            ) : (
+              <div className="Row Row--off" key={title}>
+                <span className="RowTitle"><span className="LinkLabel">{title}</span></span>
+                <span className="RowMeta">Coming soon</span>
+              </div>
+            )
+          )}
+          <Contributions />
+        </section>
       </div>
 
       <Collage />

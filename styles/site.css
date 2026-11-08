@@ -78,10 +78,10 @@ a:focus-visible, button:focus-visible {
 }
 
 /* ── Links ── */
-.Link, .Row {
+.Link, .Row, .Contrib {
   text-decoration: none;
 }
-a.Link:hover, a.Row:hover {
+a.Link:hover, a.Row:hover, a.Contrib:hover {
   color: inherit;
 }
 .Link {
@@ -110,16 +110,111 @@ a.Link:hover, a.Row:hover {
   transition: transform .38s var(--ease-out);
 }
 .Link:hover .LinkLabel::after, .Link:focus-visible .LinkLabel::after,
-.Row:hover .LinkLabel::after, .Row:focus-visible .LinkLabel::after {
+.Row:hover .LinkLabel::after, .Row:focus-visible .LinkLabel::after,
+.Contrib:hover .LinkLabel::after, .Contrib:focus-visible .LinkLabel::after {
   transform: scaleX(1);
 }
 
 /* ── Home ── */
 .Intro {
-  padding-top: 40px;
+  padding-top: var(--space-section);
 }
 .Intro p + p {
   margin-top: 16px;
+}
+/* GitHub contribution chart (components/contributions.js), inside Playground.
+   Squares share the column width, so the chart always fits. */
+.Contrib {
+  position: relative;
+  display: block;
+  color: inherit;
+  margin-top: var(--space-section);
+}
+/* GitHub-style tooltip, placed above the square by components/contributions.js */
+.ContribTip {
+  position: absolute;
+  z-index: 2;
+  transform: translateY(calc(-100% - 6px));
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: var(--color-tooltip-bg);
+  color: var(--color-tooltip-text);
+  font-size: 12px;
+  line-height: 18px;
+  white-space: nowrap;
+  pointer-events: none;
+}
+.ContribGrid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: auto repeat(7, auto);
+  grid-template-columns: auto;
+  grid-auto-columns: minmax(0, 1fr);
+  gap: 2px;
+  font-size: 11px;
+  line-height: 15px;
+  color: var(--color-text-secondary);
+}
+.ContribDays, .ContribWeek {
+  display: contents;
+}
+/* Zero line height keeps labels from stretching their rows; the text still shows, centered. */
+.ContribDay {
+  padding-right: 6px;
+  align-self: center;
+  font-size: 10px;
+  line-height: 0;
+}
+.ContribMonth {
+  position: relative;
+  height: 15px;
+  margin-bottom: 2px;
+}
+.ContribMonth span {
+  position: absolute;
+  left: 0;
+  white-space: nowrap;
+}
+.ContribCell {
+  display: block;
+  aspect-ratio: 1;
+  border-radius: 2px;
+  background: var(--color-contrib-0);
+}
+.ContribCell[data-level="1"] { background: var(--color-contrib-1); }
+.ContribCell[data-level="2"] { background: var(--color-contrib-2); }
+.ContribCell[data-level="3"] { background: var(--color-contrib-3); }
+.ContribCell[data-level="4"] { background: var(--color-contrib-4); }
+.ContribCell--blank {
+  visibility: hidden;
+}
+.ContribFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-top: 8px;
+  font-size: 11px;
+  line-height: 15px;
+  color: var(--color-text-secondary);
+}
+/* Smaller text than other links, so the hover arrow sits higher */
+.ContribSummary .RowArrow {
+  top: 2px;
+}
+.ContribLegend {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.ContribLegend .ContribCell {
+  width: 10px;
+}
+.ContribLegend span:first-child {
+  margin-right: 3px;
+}
+.ContribLegend span:last-child {
+  margin-left: 3px;
 }
 .Header {
   display: flex;
@@ -139,16 +234,17 @@ a.Link:hover, a.Row:hover {
 .Links {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
-  padding-top: 24px;
+  gap: 32px; /* leaves room for the external-link arrow (17px) */
+  padding-top: 14px; /* reads as 24px with the links' 10px tap padding */
 }
 .Group {
-  margin-top: 32px;
+  margin-top: var(--space-section);
   padding-top: 12px;
   border-top: 1px solid var(--color-border-soft);
 }
+/* Same gap as other groups, minus the links' 10px tap padding */
 .Group--first {
-  margin-top: 48px;
+  margin-top: calc(var(--space-section) - 10px);
 }
 .Group h2 {
   margin-bottom: 16px;
@@ -174,7 +270,9 @@ a.Link:hover, a.Row:hover {
   transform: translate(-3px, 3px);
   transition: opacity .24s, transform .42s var(--ease-out);
 }
-.Row:hover .RowArrow, .Row:focus-visible .RowArrow {
+.Row:hover .RowArrow, .Row:focus-visible .RowArrow,
+.Link:hover .RowArrow, .Link:focus-visible .RowArrow,
+.Contrib:hover .RowArrow, .Contrib:focus-visible .RowArrow {
   opacity: .8;
   transform: none;
 }
@@ -196,7 +294,7 @@ a.Link:hover, a.Row:hover {
   gap: 24px;
 }
 .Images--home {
-  padding-top: 72px;
+  padding-top: var(--space-section);
 }
 .Images--project {
   padding-top: 48px;
@@ -267,7 +365,8 @@ a.Link:hover, a.Row:hover {
   max-width: 660px;
   container-type: inline-size;
   aspect-ratio: 960 / 560;
-  margin: 176px auto 120px;
+  /* About two section gaps of visible space; pieces overhang the top by ~40px. */
+  margin: 136px auto 120px;
 }
 .Bit {
   position: absolute;
@@ -367,6 +466,10 @@ a.Link:hover, a.Row:hover {
 }
 
 @media (max-width: 480px) {
+  /* Half a year on phones keeps the squares a readable size. */
+  .ContribWeek--older {
+    display: none;
+  }
   .Row {
     gap: 12px;
   }
@@ -379,7 +482,8 @@ a.Link:hover, a.Row:hover {
   }
   /* Quote cards don't shrink with the collage, so they stack below it on phones. */
   .Collage {
-    margin-bottom: 240px;
+    margin-top: 100px;
+    margin-bottom: 296px;
   }
   .Bit--q2 {
     translate: min(0px, calc(30cqw - 194px)) 140px;
